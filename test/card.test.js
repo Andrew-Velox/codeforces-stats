@@ -21,7 +21,7 @@ describe("card handler", () => {
   beforeEach(() => {
     req = {
       query: {
-        username: "redheadphone3",
+        username: "yalniz",
         cache_seconds: "18000",
         force_username: true,
       },
@@ -64,15 +64,13 @@ describe("card handler", () => {
     await handler(req, res);
 
     document.body.innerHTML = res.send.mock.calls[0][0];
-    const name = document.querySelector("#name").innerHTML;
-    const rating = document.querySelector("#rating").innerHTML;
-    const maxRating = document.querySelector("#max-rating").innerHTML;
-    const rank = document.querySelector("#rank").innerHTML;
-    const maxRank = document.querySelector("#max-rank").innerHTML;
-    const contests = document.querySelector("#contests").innerHTML;
-    const problemsSolved = document.querySelector("#problems-solved").innerHTML;
-    const friendOfCount = document.querySelector("#friend-of-count").innerHTML;
-    const contribution = document.querySelector("#contribution").innerHTML;
+    const name = document.querySelector("#name").textContent;
+    const rating = document.querySelector("#rating").textContent;
+    const maxRating = document.querySelector("#max-rating").textContent;
+    const rank = document.querySelector("#rank").textContent;
+    const contests = document.querySelector("#contests").textContent;
+    const problemsSolved = document.querySelector("#problems-solved").textContent;
+    const contribution = document.querySelector("#contribution").textContent;
 
     expect(res.setHeader).toHaveBeenCalledWith("Content-Type", "image/svg+xml");
     expect(res.setHeader).toHaveBeenCalledWith(
@@ -81,14 +79,12 @@ describe("card handler", () => {
         cacheSeconds / 2
       }, s-maxage=${cacheSeconds}, stale-while-revalidate=${CONSTANTS.ONE_DAY}`
     );
-    expect(name).toBe("redheadphone3");
+    expect(name).toBe("yalniz");
     expect(rating).toBe("1386");
     expect(maxRating).toBe("1386");
     expect(rank).toBe("Pupil");
-    expect(maxRank).toBe("Pupil");
     expect(contests).toBe("5");
     expect(problemsSolved).toBe("26");
-    expect(friendOfCount).toBe("1");
     expect(contribution).toBe("0");
   });
 

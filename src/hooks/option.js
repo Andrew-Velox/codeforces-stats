@@ -3,7 +3,7 @@ import { useState } from "react";
 import qs from "fast-querystring";
 
 const defaultOption = {
-  username: "redheadphone",
+  username: "yalniz",
   theme: "github_dark",
   disable_animations: false,
   show_icons: true,
@@ -11,7 +11,7 @@ const defaultOption = {
 };
 
 const useOption = () => {
-  const [options, setOptions] = useLocalStorageState("options", {
+  const [options, setOptions] = useLocalStorageState("options_v2", {
     defaultValue: defaultOption,
   });
   const [imageUrl, setImageUrl] = useState(`/api/card?${qs.stringify(options)}`);

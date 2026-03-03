@@ -1,9 +1,9 @@
 site_name: Codeforces Readme Stats
 site_description: Dynamically generated Codeforces stats for your Github profiles or your website
-site_url: https://redheadphone.github.io/codeforces-readme-stats/
-site_author: RedHeadphone
+site_url: https://Andrew-Velox.github.io/codeforces-readme-stats/
+site_author: Andrew-Velox
 repo_name: codeforces-readme-stats
-repo_url: https://github.com/RedHeadphone/codeforces-readme-stats/
+repo_url: https://github.com/Andrew-Velox/codeforces-readme-stats/
 theme:
   name: material
   language: en
@@ -31,8 +31,8 @@ theme:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/RedHeadphone
-      name: RedHeadphone on Github
+      link: https://github.com/Andrew-Velox
+      name: Andrew-Velox on Github
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/huzaifa_Khila
       name: Huzaifa Khilawala on Twitter

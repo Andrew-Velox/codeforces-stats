@@ -9,7 +9,7 @@ export const user = {
         friendOfCount: 1,
         titlePhoto: "https://userpic.codeforces.org/no-title.jpg",
         rank: "pupil",
-        handle: "redheadphone3",
+        handle: "yalniz",
         maxRating: 1386,
         avatar: "https://userpic.codeforces.org/no-avatar.jpg",
         registrationTimeSeconds: 1710439345,
@@ -23,7 +23,7 @@ export const user = {
       {
         contestId: 1948,
         contestName: "Educational Codeforces Round 163 (Rated for Div. 2)",
-        handle: "redheadphone3",
+        handle: "yalniz",
         rank: 2269,
         ratingUpdateTimeSeconds: 1710520500,
         oldRating: 0,
@@ -32,7 +32,7 @@ export const user = {
       {
         contestId: 1944,
         contestName: "Codeforces Round 934 (Div. 2)",
-        handle: "redheadphone3",
+        handle: "yalniz",
         rank: 4504,
         ratingUpdateTimeSeconds: 1710608400,
         oldRating: 570,
@@ -41,7 +41,7 @@ export const user = {
       {
         contestId: 1945,
         contestName: "Codeforces Round 935 (Div. 3)",
-        handle: "redheadphone3",
+        handle: "yalniz",
         rank: 1019,
         ratingUpdateTimeSeconds: 1710843600,
         oldRating: 882,
@@ -50,7 +50,7 @@ export const user = {
       {
         contestId: 1942,
         contestName: "CodeTON Round 8 (Div. 1 + Div. 2, Rated, Prizes!)",
-        handle: "redheadphone3",
+        handle: "yalniz",
         rank: 5434,
         ratingUpdateTimeSeconds: 1711820100,
         oldRating: 1175,
@@ -59,7 +59,7 @@ export const user = {
       {
         contestId: 1951,
         contestName: "Codeforces Global Round 25",
-        handle: "redheadphone3",
+        handle: "yalniz",
         rank: 3890,
         ratingUpdateTimeSeconds: 1712424900,
         oldRating: 1275,
@@ -86,7 +86,7 @@ export const user = {
         },
         author: {
           contestId: 1951,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "PRACTICE",
           ghost: false,
           startTimeSeconds: 1712414100,
@@ -114,7 +114,7 @@ export const user = {
         },
         author: {
           contestId: 1951,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "CONTESTANT",
           ghost: false,
           room: 399,
@@ -143,7 +143,7 @@ export const user = {
         },
         author: {
           contestId: 1951,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "CONTESTANT",
           ghost: false,
           room: 399,
@@ -172,7 +172,7 @@ export const user = {
         },
         author: {
           contestId: 1951,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "CONTESTANT",
           ghost: false,
           room: 399,
@@ -201,7 +201,7 @@ export const user = {
         },
         author: {
           contestId: 1951,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "CONTESTANT",
           ghost: false,
           room: 399,
@@ -230,7 +230,7 @@ export const user = {
         },
         author: {
           contestId: 1942,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "PRACTICE",
           ghost: false,
           startTimeSeconds: 1711809300,
@@ -258,7 +258,7 @@ export const user = {
         },
         author: {
           contestId: 1942,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "CONTESTANT",
           ghost: false,
           room: 268,
@@ -287,7 +287,7 @@ export const user = {
         },
         author: {
           contestId: 1942,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "CONTESTANT",
           ghost: false,
           room: 268,
@@ -316,7 +316,7 @@ export const user = {
         },
         author: {
           contestId: 1942,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "CONTESTANT",
           ghost: false,
           room: 268,
@@ -345,7 +345,7 @@ export const user = {
         },
         author: {
           contestId: 1942,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "CONTESTANT",
           ghost: false,
           room: 268,
@@ -374,7 +374,7 @@ export const user = {
         },
         author: {
           contestId: 1942,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "CONTESTANT",
           ghost: false,
           room: 268,
@@ -403,7 +403,7 @@ export const user = {
         },
         author: {
           contestId: 1942,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "CONTESTANT",
           ghost: false,
           room: 268,
@@ -432,7 +432,7 @@ export const user = {
         },
         author: {
           contestId: 1942,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "CONTESTANT",
           ghost: false,
           room: 268,
@@ -461,7 +461,7 @@ export const user = {
         },
         author: {
           contestId: 1942,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "CONTESTANT",
           ghost: false,
           room: 268,
@@ -496,7 +496,7 @@ export const user = {
         },
         author: {
           contestId: 1946,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "PRACTICE",
           ghost: false,
           startTimeSeconds: 1711118100,
@@ -530,7 +530,7 @@ export const user = {
         },
         author: {
           contestId: 1946,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "PRACTICE",
           ghost: false,
           startTimeSeconds: 1711118100,
@@ -563,7 +563,7 @@ export const user = {
         },
         author: {
           contestId: 1759,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "PRACTICE",
           ghost: false,
           startTimeSeconds: 1668782100,
@@ -596,7 +596,7 @@ export const user = {
         },
         author: {
           contestId: 1759,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "PRACTICE",
           ghost: false,
           startTimeSeconds: 1668782100,
@@ -629,7 +629,7 @@ export const user = {
         },
         author: {
           contestId: 1759,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "PRACTICE",
           ghost: false,
           startTimeSeconds: 1668782100,
@@ -663,7 +663,7 @@ export const user = {
         },
         author: {
           contestId: 1946,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "PRACTICE",
           ghost: false,
           startTimeSeconds: 1711118100,
@@ -697,7 +697,7 @@ export const user = {
         },
         author: {
           contestId: 1946,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "PRACTICE",
           ghost: false,
           startTimeSeconds: 1711118100,
@@ -731,7 +731,7 @@ export const user = {
         },
         author: {
           contestId: 1946,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "PRACTICE",
           ghost: false,
           startTimeSeconds: 1711118100,
@@ -765,7 +765,7 @@ export const user = {
         },
         author: {
           contestId: 1946,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "PRACTICE",
           ghost: false,
           startTimeSeconds: 1711118100,
@@ -793,7 +793,7 @@ export const user = {
         },
         author: {
           contestId: 1946,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "PRACTICE",
           ghost: false,
           startTimeSeconds: 1711118100,
@@ -821,7 +821,7 @@ export const user = {
         },
         author: {
           contestId: 1946,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "PRACTICE",
           ghost: false,
           startTimeSeconds: 1711118100,
@@ -849,7 +849,7 @@ export const user = {
         },
         author: {
           contestId: 1946,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "PRACTICE",
           ghost: false,
           startTimeSeconds: 1711118100,
@@ -877,7 +877,7 @@ export const user = {
         },
         author: {
           contestId: 1946,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "PRACTICE",
           ghost: false,
           startTimeSeconds: 1711118100,
@@ -905,7 +905,7 @@ export const user = {
         },
         author: {
           contestId: 1946,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "PRACTICE",
           ghost: false,
           startTimeSeconds: 1711118100,
@@ -932,7 +932,7 @@ export const user = {
         },
         author: {
           contestId: 1945,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "PRACTICE",
           ghost: false,
           startTimeSeconds: 1710835500,
@@ -959,7 +959,7 @@ export const user = {
         },
         author: {
           contestId: 1945,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "CONTESTANT",
           ghost: false,
           startTimeSeconds: 1710835500,
@@ -986,7 +986,7 @@ export const user = {
         },
         author: {
           contestId: 1945,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "CONTESTANT",
           ghost: false,
           startTimeSeconds: 1710835500,
@@ -1013,7 +1013,7 @@ export const user = {
         },
         author: {
           contestId: 1945,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "CONTESTANT",
           ghost: false,
           startTimeSeconds: 1710835500,
@@ -1040,7 +1040,7 @@ export const user = {
         },
         author: {
           contestId: 1945,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "CONTESTANT",
           ghost: false,
           startTimeSeconds: 1710835500,
@@ -1067,7 +1067,7 @@ export const user = {
         },
         author: {
           contestId: 1945,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "CONTESTANT",
           ghost: false,
           startTimeSeconds: 1710835500,
@@ -1094,7 +1094,7 @@ export const user = {
         },
         author: {
           contestId: 1945,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "CONTESTANT",
           ghost: false,
           startTimeSeconds: 1710835500,
@@ -1122,7 +1122,7 @@ export const user = {
         },
         author: {
           contestId: 1944,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "CONTESTANT",
           ghost: false,
           room: 375,
@@ -1151,7 +1151,7 @@ export const user = {
         },
         author: {
           contestId: 1944,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "CONTESTANT",
           ghost: false,
           room: 375,
@@ -1180,7 +1180,7 @@ export const user = {
         },
         author: {
           contestId: 1944,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "CONTESTANT",
           ghost: false,
           room: 375,
@@ -1209,7 +1209,7 @@ export const user = {
         },
         author: {
           contestId: 1944,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "CONTESTANT",
           ghost: false,
           room: 375,
@@ -1238,7 +1238,7 @@ export const user = {
         },
         author: {
           contestId: 1944,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "CONTESTANT",
           ghost: false,
           room: 375,
@@ -1267,7 +1267,7 @@ export const user = {
         },
         author: {
           contestId: 1944,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "CONTESTANT",
           ghost: false,
           room: 375,
@@ -1295,7 +1295,7 @@ export const user = {
         },
         author: {
           contestId: 1921,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "PRACTICE",
           ghost: false,
           startTimeSeconds: 1705329300,
@@ -1322,7 +1322,7 @@ export const user = {
         },
         author: {
           contestId: 1702,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "PRACTICE",
           ghost: false,
           startTimeSeconds: 1657463700,
@@ -1349,7 +1349,7 @@ export const user = {
         },
         author: {
           contestId: 1702,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "PRACTICE",
           ghost: false,
           startTimeSeconds: 1657463700,
@@ -1376,7 +1376,7 @@ export const user = {
         },
         author: {
           contestId: 1702,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "PRACTICE",
           ghost: false,
           startTimeSeconds: 1657463700,
@@ -1403,7 +1403,7 @@ export const user = {
         },
         author: {
           contestId: 1702,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "PRACTICE",
           ghost: false,
           startTimeSeconds: 1657463700,
@@ -1430,7 +1430,7 @@ export const user = {
         },
         author: {
           contestId: 1702,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "PRACTICE",
           ghost: false,
           startTimeSeconds: 1657463700,
@@ -1457,7 +1457,7 @@ export const user = {
         },
         author: {
           contestId: 1948,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "CONTESTANT",
           ghost: false,
           startTimeSeconds: 1710513300,
@@ -1491,7 +1491,7 @@ export const user = {
         },
         author: {
           contestId: 1948,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "CONTESTANT",
           ghost: false,
           startTimeSeconds: 1710513300,
@@ -1518,7 +1518,7 @@ export const user = {
         },
         author: {
           contestId: 1948,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "CONTESTANT",
           ghost: false,
           startTimeSeconds: 1710513300,
@@ -1545,7 +1545,7 @@ export const user = {
         },
         author: {
           contestId: 1948,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "CONTESTANT",
           ghost: false,
           startTimeSeconds: 1710513300,
@@ -1572,7 +1572,7 @@ export const user = {
         },
         author: {
           contestId: 1948,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "CONTESTANT",
           ghost: false,
           startTimeSeconds: 1710513300,
@@ -1599,7 +1599,7 @@ export const user = {
         },
         author: {
           contestId: 1948,
-          members: [{ handle: "redheadphone3" }],
+          members: [{ handle: "yalniz" }],
           participantType: "CONTESTANT",
           ghost: false,
           startTimeSeconds: 1710513300,

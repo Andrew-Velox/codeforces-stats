@@ -223,11 +223,11 @@ export default function Home() {
 
             <Divider className="divider" />
             <Space className="footer">
-              <a href="https://github.com/RedHeadphone/codeforces-readme-stats">
+              <a href="https://github.com/Andrew-Velox/codeforces-readme-stats">
                 <GithubFilled />
                 Github
               </a>
-              <a href="https://redheadphone.github.io/codeforces-readme-stats">
+              <a href="https://Andrew-Velox.github.io/codeforces-readme-stats">
                 <BookFilled />
                 Docs
               </a>

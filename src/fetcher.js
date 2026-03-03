@@ -44,6 +44,24 @@ function count_submissions(submissions) {
   return count;
 }
 
+function count_tags(submissions) {
+  const alreadySolved = {};
+  const tagCount = {};
+  for (const submission of submissions) {
+    if (submission.verdict !== "OK") continue;
+    const problemID = `${submission.problem.contestId}-${submission.problem.index}`;
+    if (alreadySolved[problemID]) continue;
+    alreadySolved[problemID] = true;
+    for (const tag of submission.problem.tags || []) {
+      tagCount[tag] = (tagCount[tag] || 0) + 1;
+    }
+  }
+  const sorted = Object.entries(tagCount).sort((a, b) => b[1] - a[1]);
+  const totalTagCount = sorted.reduce((s, [, c]) => s + c, 0);
+  const topTags = sorted.slice(0, 3).map(([name, count]) => ({ name, count }));
+  return { topTags, totalTagCount };
+}
+
 export function get_rating(username, cache_seconds) {
   return fetch_error_handler(
     () =>
@@ -99,6 +117,8 @@ export function get_stats(username, cache_seconds) {
               maxRating,
               friendOfCount,
               contribution,
+              titlePhoto,
+              registrationTimeSeconds,
             } = responses[0].data.result[0];
 
             rating = rating ? rating : 0;
@@ -113,6 +133,7 @@ export function get_stats(username, cache_seconds) {
             const contestsCount = responses[1].data.result.length;
             const submissions = responses[2].data.result.length;
             const problemsSolved = count_submissions(responses[2].data.result);
+            const { topTags, totalTagCount } = count_tags(responses[2].data.result);
 
             const res = {
               username,
@@ -126,6 +147,10 @@ export function get_stats(username, cache_seconds) {
               submissions,
               friendOfCount,
               contribution,
+              titlePhoto: titlePhoto || "",
+              registrationTimeSeconds: registrationTimeSeconds || 0,
+              topTags,
+              totalTagCount,
             };
             
             try {
