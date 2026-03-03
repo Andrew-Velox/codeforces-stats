@@ -17,10 +17,16 @@ class KVCache {
   }
 
   get(key) {
+    if (!process.env.KV_REST_API_URL || !process.env.KV_REST_API_TOKEN) {
+      return Promise.resolve(null);
+    }
     return kv.get(key+"/"+this.type);
   }
 
   set(key, value) {
+    if (!process.env.KV_REST_API_URL || !process.env.KV_REST_API_TOKEN) {
+      return;
+    }
     kv.set(key+"/"+this.type, value);
   }
 }

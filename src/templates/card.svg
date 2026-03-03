@@ -30,7 +30,7 @@
     .rating-value { font-size: 32px; font-weight: 500; fill: #{{ theme.title_color }}; }
     .rating-label { font-size: 13px; fill: #{{ theme.text_color }}; font-weight: 600; }
     
-    .chart-total  { font-size: 26px; font-weight: 800; fill: #{{ theme.title_color }}; }
+    .chart-total  { font-size: 26px; font-weight: 800; fill: #{{ theme.chart_total_color }}; }
     .chart-label  { font-size: 10px; fill: #{{ theme.text_color }}; font-weight: 600; letter-spacing: 0.5px; }
     
     .stat-label   { font-size: 12px; fill: #{{ theme.icon_color }}; font-weight: 500; }

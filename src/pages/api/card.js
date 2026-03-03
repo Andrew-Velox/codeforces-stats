@@ -21,6 +21,10 @@ export default async function handler(req, res) {
     icon_color,
     border_color,
     bg_color,
+    tag_1_color,
+    tag_2_color,
+    tag_3_color,
+    chart_total_color,
     cache_seconds,
     disable_animations,
     show_icons,
@@ -74,10 +78,15 @@ export default async function handler(req, res) {
     }
 
     res.setHeader("Content-Type", "image/svg+xml");
-    res.setHeader(
-      "Cache-Control",
-      `max-age=${cacheSeconds / 2}, s-maxage=${cacheSeconds}, stale-while-revalidate=${CONSTANTS.ONE_DAY}`
-    );
+
+    if (process.env.NODE_ENV === "development") {
+      res.setHeader("Cache-Control", `no-cache, no-store, must-revalidate`);
+    } else {
+      res.setHeader(
+        "Cache-Control",
+        `max-age=${cacheSeconds / 2}, s-maxage=${cacheSeconds}, stale-while-revalidate=${CONSTANTS.ONE_DAY}`
+      );
+    }
 
     const name = handle; // Always use handle as metadata name
     const year = registrationTimeSeconds
@@ -106,6 +115,31 @@ export default async function handler(req, res) {
     // Note: Offsets handled via `transform="rotate(-90)"` in SVG to start at 12 o'clock.
     // Zero offsets used in template variables.
 
+    // Resolve Theme & Colors
+    const themeConfig = {
+      ...themes["default"],
+      ...themes[theme],
+      ...(title_color && { title_color }),
+      ...(text_color && { text_color }),
+      ...(icon_color && { icon_color }),
+      ...(border_color && { border_color }),
+      ...(bg_color && { bg_color }),
+      ...(tag_1_color && { tag_1_color }),
+      ...(tag_2_color && { tag_2_color }),
+      ...(tag_3_color && { tag_3_color }),
+      ...(chart_total_color && { chart_total_color }),
+    };
+
+    if (!themeConfig.chart_total_color) {
+      themeConfig.chart_total_color = themeConfig.title_color;
+    }
+
+    // Tag colors: Use theme overriding existing constants if present
+    // Note: TAG_COLORS has '#' prefix; theme colors usually do not. 
+    const t1Color = themeConfig.tag_1_color ? `#${themeConfig.tag_1_color}` : TAG_COLORS[0];
+    const t2Color = themeConfig.tag_2_color ? `#${themeConfig.tag_2_color}` : TAG_COLORS[1];
+    const t3Color = themeConfig.tag_3_color ? `#${themeConfig.tag_3_color}` : TAG_COLORS[2];
+
     res.send(
       renderTemplate("card.svg", {
         name,
@@ -126,30 +160,22 @@ export default async function handler(req, res) {
         full_name: fullName, // Pass raw full name for subtitle
         tag1_name: tags[0].name,
         tag1_count: tags[0].count,
-        tag1_color: TAG_COLORS[0],
+        tag1_color: t1Color,
         tag1_dash: `${L1.toFixed(2)} ${DONUT_C.toFixed(2)}`,
         tag1_offset: "0",
         tag2_name: tags[1].name,
         tag2_count: tags[1].count,
-        tag2_color: TAG_COLORS[1],
+        tag2_color: t2Color,
         tag2_dash: `${(L1 + L2).toFixed(2)} ${DONUT_C.toFixed(2)}`,
         tag2_offset: "0",
         tag3_name: tags[2].name,
         tag3_count: tags[2].count,
-        tag3_color: TAG_COLORS[2],
+        tag3_color: t3Color,
         tag3_dash: `0 0`, 
         tag3_offset: "0",
         animation: true,    // Force animation enabled
         show_icons: true,   // Force icons enabled
-        theme: {
-          ...themes["default"],
-          ...themes[theme],
-          ...(title_color && { title_color }),
-          ...(text_color && { text_color }),
-          ...(icon_color && { icon_color }),
-          ...(border_color && { border_color }),
-          ...(bg_color && { bg_color }),
-        },
+        theme: themeConfig,
       })
     );
   } catch ({ status, error }) {
