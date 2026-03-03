@@ -47,7 +47,9 @@
 |transparent|
 |![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz&theme=transparent)| -->
 
-<!-- [More themes](https://github.com/vn7n24fzkq/codeforces-stats-vlx-example/tree/master/profile-summary-card-output) -->
+
+more themes are coming soon!
+<!-- [More themes]() -->
 
 
 
