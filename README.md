@@ -31,7 +31,6 @@
 [![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=dark)](https://codeforces.com/profile/tourist)
 
 
-
 </div>
 
 
@@ -97,8 +96,7 @@ Preview:
 
 Please kindly follow [CONTRIBUTING.md](CONTRIBUTING.md) to get started. -->
 
-## Acknowledgements
 
-### Inspirations
+## Inspirations
 
 - [RedHeadphone/codeforces-readme-stats](https://github.com/RedHeadphone/codeforces-readme-stats)
