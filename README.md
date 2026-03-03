@@ -7,7 +7,7 @@
       A tool to generate your github summary card for profile README. Inspired by <a href=https://github.com/tipsy/profile-summary-for-github>profile-summary-for-github</a>
    </p>
    <p>
-      :star: This repo is just for fun, feel free to contribute! :star:
+      ⭐ This repo is just for fun, feel free to contribute! ⭐
    </p>
    <!-- <p align="center">
       <a href="https://github.com/vn7n24fzkq/github-profile-summary-cards/stargazers">
@@ -34,27 +34,6 @@
 
 </div>
 
-## Usage
-
-### Stats card
-
-Simply copy the code below, paste it into your `README.md`, and change the username query parameter to your Codeforces username (case-insensitive).
-
-```md
-![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz)
-```
-
-Preview:
-
-<p align="center">
-  <img alt="Codeforces Stats" src="https://codeforces-stats-vlx.vercel.app/api/card?username=tourist" />
-</p>
-
-Want a hyperlink? Try this:
-
-```md
-[![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist)](https://codeforces.com/profile/tourist)
-```
 
 ## Themes
 
@@ -69,31 +48,52 @@ Want a hyperlink? Try this:
 |transparent|
 |![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz&theme=transparent)| -->
 
-[More themes](https://github.com/vn7n24fzkq/codeforces-stats-vlx-example/tree/master/profile-summary-card-output)
+<!-- [More themes](https://github.com/vn7n24fzkq/codeforces-stats-vlx-example/tree/master/profile-summary-card-output) -->
 
 
-### Rating badge
 
-Rating badge can also be added to your `README.md`, by coping and pasting the code below 
+## Usage
+
+### Stats card
+
+Simply copy the code below, paste it into your `README.md`, and change the username query parameter to your Codeforces username (case-insensitive).
 
 ```md
-![Codeforces Badge](https://codeforces-stats-vlx.vercel.app/api/badge?username=yalniz)
+![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist)
 ```
 
 Preview:
 
 <p align="center">
-  <img alt="Codeforces Badge" style="height:30px" src="https://codeforces-stats-vlx.vercel.app/api/badge?username=yalniz" />
+  <img alt="Codeforces Stats" src="https://codeforces-stats-vlx.vercel.app/api/card?username=tourist" />
 </p>
 
-## Contributing
+Want a hyperlink? Try this:
 
-Please kindly follow [CONTRIBUTING.md](CONTRIBUTING.md) to get started.
+```md
+[![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist)](https://codeforces.com/profile/tourist)
+```
+<!-- 
+### Rating badge
+
+Rating badge can also be added to your `README.md`, by coping and pasting the code below 
+
+```md
+![Codeforces Badge](https://codeforces-stats-vlx.vercel.app/api/badge?username=tourist)
+```
+
+Preview:
+
+<p align="center">
+  <img alt="Codeforces Badge" style="height:30px" src="https://codeforces-stats-vlx.vercel.app/api/badge?username=tourist" />
+</p> -->
+
+<!-- ## Contributing
+
+Please kindly follow [CONTRIBUTING.md](CONTRIBUTING.md) to get started. -->
 
 ## Acknowledgements
 
 ### Inspirations
 
-- [sudiptob2/cf-stats](https://github.com/sudiptob2/cf-stats): SVG design
-- [anuraghazra/github-readme-stats](https://github.com/anuraghazra/github-readme-stats): API design and themes
-- [JacobLinCool/LeetCode-Stats-Card](https://github.com/JacobLinCool/LeetCode-Stats-Card): Miscellaneous
+- [RedHeadphone/codeforces-readme-stats](https://github.com/RedHeadphone/codeforces-readme-stats)
