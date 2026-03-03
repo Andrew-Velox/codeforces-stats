@@ -35,6 +35,22 @@ Want a hyperlink? Try this:
 [![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz)](https://codeforces.com/profile/yalniz)
 ```
 
+## Themes
+
+|   |   |   |   |   |
+|:---:|:---:|:---:|:---:|:---:|
+|default|dark|nord_bright|nord_dark|transparent|
+|![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz&theme=default)|![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz&theme=dark)| ![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz&theme=nord_bright)|![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz&theme=nord_dark)|![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz&theme=transparent)|
+<!-- |gruvbox|monokai|nord_bright|nord_dark|radical|
+|![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz)|![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz)| ![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz)|![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz)  |![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz)|
+|solarized|solarized_dark|tokyonight|vue|zenburn|
+|![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz)|![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz)| ![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz)|![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz)  |![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz)|
+|transparent|
+|![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz&theme=transparent)| -->
+
+[More themes](https://github.com/vn7n24fzkq/codeforces-stats-vlx-example/tree/master/profile-summary-card-output)
+
+
 ### Rating badge
 
 Rating badge can also be added to your `README.md`, by coping and pasting the code below 
