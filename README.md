@@ -26,7 +26,7 @@ Simply copy the code below, paste it into your `README.md`, and change the usern
 Preview:
 
 <p align="center">
-  <img alt="Codeforces Stats" src="https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz" />
+  <img alt="Codeforces Stats" src="https://codeforces-stats-vlx.vercel.app/api/card?username=yalni" />
 </p>
 
 Want a hyperlink? Try this:

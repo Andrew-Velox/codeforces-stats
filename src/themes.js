@@ -27,10 +27,10 @@ const themes = {
     title_color: "00000",
     icon_color: "000000",
     text_color: "000000",
+    bg_color: "ffffff00",
     tag_1_color: "06b6d4",
     tag_2_color: "ec4899",
     tag_3_color: "eab308",
-    bg_color: "ffffff00",
   },
   dark: {
     title_color: "fff",

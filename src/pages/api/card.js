@@ -8,7 +8,7 @@ import {
   clamp_value,
 } from "@/common.js";
 
-const TAG_COLORS = ["#3b82f6", "#10b981", "#f59e0b"];
+const TAG_COLORS = ["#06b6d4", "#ec4899", "#eab308"];
 const DONUT_C = 2 * Math.PI * 70; // circumference for r=70
 
 export default async function handler(req, res) {
