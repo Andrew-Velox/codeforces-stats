@@ -1,16 +1,23 @@
 const themes = {
-  // default: {
-  //   title_color: "2f80ed",
+  // defaultt: {
+  //   title_color: "000000",
   //   icon_color: "4c71f2",
   //   text_color: "434d58",
-  //   bg_color: "fffefe",
-  //   border_color: "e4e2e2",
+  //   bg_color: "2e3541",
   // },
-  // default_repocard: {
-  //   title_color: "2f80ed",
-  //   icon_color: "586069",
-  //   text_color: "434d58",
-  //   bg_color: "fffefe",
+  default: {
+    title_color: "000",
+    icon_color: "000",
+    text_color: "000",
+    bg_color: "fff",
+    border_color: "e4e2e2",
+  },
+  // algolia: {
+  //   title_color: "000",
+  //   icon_color: "000",
+  //   text_color: "000",
+  //   bg_color: "fff",
+  //   border_color: "e4e2e2",
   // },
   transparent: {
     title_color: "00000",
@@ -24,30 +31,42 @@ const themes = {
     text_color: "fff",
     bg_color: "151515",
   },
+  nord_bright: {
+    title_color: "000",
+    icon_color: "000",
+    text_color: "000",
+    bg_color: "eceef5",
+  },
+  nord_dark: {
+    title_color: "fff",
+    icon_color: "fff",
+    text_color: "fff",
+    bg_color: "151515",
+  },
   // tokyonight: {
-  //   title_color: "70a5fd",
+  //   title_color: "fff",
   //   icon_color: "bf91f3",
   //   text_color: "38bdae",
   //   bg_color: "1a1b27",
   // },
   // monokai: {
-  //   title_color: "eb1f6a",
+  //   title_color: "fff",
   //   icon_color: "e28905",
   //   text_color: "f1f1eb",
   //   bg_color: "272822",
   // },
   // vue: {
-  //   title_color: "41b883",
+  //   title_color: "fff",
   //   icon_color: "41b883",
   //   text_color: "273849",
   //   bg_color: "fffefe",
   // },
-  algolia: {
-    title_color: "00AEFF",
-    icon_color: "2DDE98",
-    text_color: "FFFFFF",
-    bg_color: "050F2C",
-  },
+  // algolia: {
+  //   title_color: "fff",
+  //   icon_color: "2DDE98",
+  //   text_color: "FFFFFF",
+  //   bg_color: "050F2C",
+  // },
   // gotham: {
   //   title_color: "2aa889",
   //   icon_color: "599cab",
