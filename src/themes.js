@@ -11,9 +11,9 @@ const themes = {
     text_color: "000",
     bg_color: "fff",
     border_color: "e4e2e2",
-    tag_1_color: "3b82f6",
-    tag_2_color: "10b981",
-    tag_3_color: "f59e0b",
+    tag_1_color: "06b6d4",
+    tag_2_color: "ec4899",
+    tag_3_color: "eab308",
     chart_total_color: "000",
   },
   // algolia: {
@@ -27,6 +27,9 @@ const themes = {
     title_color: "00000",
     icon_color: "000000",
     text_color: "000000",
+    tag_1_color: "06b6d4",
+    tag_2_color: "ec4899",
+    tag_3_color: "eab308",
     bg_color: "ffffff00",
   },
   dark: {
@@ -34,7 +37,9 @@ const themes = {
     icon_color: "fff",
     text_color: "fff",
     bg_color: "151515",
-    tag_1_color: "fff",
+    tag_1_color: "06b6d4",
+    tag_2_color: "ec4899",
+    tag_3_color: "eab308",
     chart_total_color: "fff",
   },
   nord_bright: {
@@ -52,6 +57,9 @@ const themes = {
     icon_color: "fff",
     text_color: "fff",
     bg_color: "151515",
+    tag_1_color: "06b6d4",
+    tag_2_color: "ec4899",
+    tag_3_color: "eab308",
     chart_total_color: "fff",
   },
   // tokyonight: {
