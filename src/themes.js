@@ -24,13 +24,14 @@ const themes = {
   //   border_color: "e4e2e2",
   // },
   transparent: {
-    title_color: "00000",
-    icon_color: "000000",
-    text_color: "000000",
+    title_color: "fff",
+    icon_color: "fff",
+    text_color: "fff",
     bg_color: "ffffff00",
     tag_1_color: "06b6d4",
     tag_2_color: "ec4899",
     tag_3_color: "eab308",
+    chart_total_color: "fff"
   },
   dark: {
     title_color: "fff",
