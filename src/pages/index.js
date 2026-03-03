@@ -61,17 +61,6 @@ export default function Home() {
     });
   };
 
-  const handleCopyMarkdown = () => {
-    navigator.clipboard.writeText(
-      `[![Codeforces Stats](${
-        window.location.href.substring(
-          0,
-          window.location.href.lastIndexOf("/")
-        ) + imageUrl
-      })](https://codeforces.com/profile/${options.username})`
-    );
-    openNotification("Success", "Copied to clipboard!");
-  };
 
   const handleOpenInNewTab = () => {
     window.open(imageUrl, "_blank");
@@ -155,14 +144,7 @@ export default function Home() {
                   </Form.Item>
                   <Form.Item className="form-item">
                     <Space className="submit-wrapper">
-                      <Button
-                        type="default"
-                        onClick={handleCopyMarkdown}
-                        disabled={error || loading}
-                      >
-                        <CopyOutlined />
-                        Copy Markdown
-                      </Button>
+                      
                       <Button
                         type="default"
                         onClick={handleOpenInNewTab}
@@ -194,10 +176,7 @@ export default function Home() {
                 <GithubFilled />
                 Github
               </a>
-              <a href="https://Andrew-Velox.github.io/codeforces-stats">
-                <BookFilled />
-                Docs
-              </a>
+              
             </Space>
           </Col>
         </Card>
