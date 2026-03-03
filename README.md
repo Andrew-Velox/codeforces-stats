@@ -4,7 +4,7 @@
   <!-- [English](./README.md) -->
   💙
    <p>
-      A tool to generate your github summary card for profile README. Inspired by <a href=https://github.com/tipsy/profile-summary-for-github>profile-summary-for-github</a>
+      A tool to generate your github summary card for profile README. Inspired by <a href=https://github.com/RedHeadphone/codeforces-readme-stats>codeforces-readme-stats</a>
    </p>
    <p>
       ⭐ This repo is just for fun, feel free to contribute! ⭐
@@ -23,7 +23,7 @@
 
 <div align="center">
 <p>
-<a href="https://github-profile-summary-cards.vercel.app/demo.html">Get your own cards now!!</a>
+<a href="https://codeforces-stats-vlx.vercel.app">Get your own cards now!!</a>
 </p>
 
 
@@ -59,7 +59,7 @@
 Simply copy the code below, paste it into your `README.md`, and change the username query parameter to your Codeforces username (case-insensitive).
 
 ```md
-![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist)
+![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/card?username={handle})
 ```
 
 Preview:
@@ -68,10 +68,15 @@ Preview:
   <img alt="Codeforces Stats" src="https://codeforces-stats-vlx.vercel.app/api/card?username=tourist" />
 </p>
 
-Want a hyperlink? Try this:
+## Change Theme:
 
 ```md
-[![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist)](https://codeforces.com/profile/tourist)
+![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/card?username={handle}&theme={theme_name})
+```
+## Want a hyperlink? Try this:
+
+```md
+[![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/card?username={handle})](https://codeforces.com/profile/{handle})
 ```
 <!-- 
 ### Rating badge
