@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     dangerouslyAllowSVG: true,
-    domains: ['codeforces-readme-stats.vercel.app','localhost'],
+    domains: ['codeforces-stats.vercel.app','localhost'],
   },
 }
 

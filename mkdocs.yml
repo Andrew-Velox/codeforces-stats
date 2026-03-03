@@ -1,9 +1,9 @@
-site_name: Codeforces Readme Stats
+site_name: Codeforces Stats
 site_description: Dynamically generated Codeforces stats for your Github profiles or your website
-site_url: https://Andrew-Velox.github.io/codeforces-readme-stats/
+site_url: https://Andrew-Velox.github.io/codeforces-stats/
 site_author: Andrew-Velox
-repo_name: codeforces-readme-stats
-repo_url: https://github.com/Andrew-Velox/codeforces-readme-stats/
+repo_name: codeforces-stats
+repo_url: https://github.com/Andrew-Velox/codeforces-stats/
 theme:
   name: material
   language: en

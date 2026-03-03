@@ -5,7 +5,7 @@ import { kv } from "@vercel/kv";
 const instance = Axios.create({
   baseURL: "https://codeforces.com/api",
   headers: {
-    "User-Agent": "Codeforces Readme Stats",
+    "User-Agent": "Codeforces Stats",
   },
 });
 

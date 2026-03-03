@@ -101,7 +101,7 @@ export default function Home() {
             <div className="header">
               <Space>
                 <Image src={Logo} alt="Logo" width={28} height={28} />
-                <h1 className="header-title">Codeforces Readme Stats</h1>
+                <h1 className="header-title">Codeforces Stats</h1>
               </Space>
               <p>
                 ⚡ Dynamically generated Codeforces stats for your Github
@@ -223,11 +223,11 @@ export default function Home() {
 
             <Divider className="divider" />
             <Space className="footer">
-              <a href="https://github.com/Andrew-Velox/codeforces-readme-stats">
+              <a href="https://github.com/Andrew-Velox/codeforces-stats">
                 <GithubFilled />
                 Github
               </a>
-              <a href="https://Andrew-Velox.github.io/codeforces-readme-stats">
+              <a href="https://Andrew-Velox.github.io/codeforces-stats">
                 <BookFilled />
                 Docs
               </a>

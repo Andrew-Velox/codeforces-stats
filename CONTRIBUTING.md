@@ -1,4 +1,4 @@
-# Contributing to [Codeforces readme stats](https://github.com/Andrew-Velox/codeforces-readme-stats)
+# Contributing to [Codeforces Stats](https://github.com/Andrew-Velox/codeforces-stats)
 
 We love your input! We want to make contributing to this project as easy and transparent as possible, whether it's:
 
@@ -18,7 +18,7 @@ Pull requests are the best way to propose changes. We actively welcome your pull
 
 ## Local Development
 
-To run & test codeforces-readme-stats, you need to follow a few simple steps:-
+To run & test codeforces-stats, you need to follow a few simple steps:-
 
 1.  Fork the repository and clone the code to your local machine.
 2.  Run `npm install` in the repository root.
@@ -27,7 +27,7 @@ To run & test codeforces-readme-stats, you need to follow a few simple steps:-
 
 ## Themes Contribution
 
-Codeforces Readme Stats supports custom theming, and you can also contribute new themes!
+Codeforces Stats supports custom theming, and you can also contribute new themes!
 
 All you need to do is edit the [src/themes.js](./src/themes.js) file and add your theme at the end of the file.
 
@@ -37,9 +37,9 @@ While creating the Pull request to add a new theme **don't forget to add a scree
 
 In short, when you submit changes, your submissions are understood to be under the same [MIT License](http://choosealicense.com/licenses/mit/) that covers the project. Feel free to contact the maintainers if that's a concern.
 
-## Report issues/bugs using GitHub's [issues](https://github.com/Andrew-Velox/codeforces-readme-stats/issues)
+## Report issues/bugs using GitHub's [issues](https://github.com/Andrew-Velox/codeforces-stats/issues)
 
-We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/Andrew-Velox/codeforces-readme-stats/issues/new/choose); it's that easy!
+We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/Andrew-Velox/codeforces-stats/issues/new/choose); it's that easy!
 
 ### Bug Reports
 
