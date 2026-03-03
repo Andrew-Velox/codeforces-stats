@@ -1,17 +1,38 @@
-# Codeforces Stats
+<div align="center">
+   <h1>Codeforces Stats Cards</h1>
 
-An API that generates beautiful statistics of your Codeforces profile as an SVG image, perfect for showcasing your competitive programming skills and achievements on Github.
+  <!-- [English](./README.md) -->
+  💙
+   <p>
+      A tool to generate your github summary card for profile README. Inspired by <a href=https://github.com/tipsy/profile-summary-for-github>profile-summary-for-github</a>
+   </p>
+   <p>
+      :star: This repo is just for fun, feel free to contribute! :star:
+   </p>
+   <!-- <p align="center">
+      <a href="https://github.com/vn7n24fzkq/github-profile-summary-cards/stargazers">
+      <img alt="Stargazers" src="https://img.shields.io/github/stars/vn7n24fzkq/github-profile-summary-cards?style=for-the-badge&logo=github&color=f4dbd6&logoColor=D9E0EE&labelColor=302D41"></a>
+      <a href="https://github.com/vn7n24fzkq/github-profile-summary-cards/releases/latest">
+      <img alt="Releases" src="https://img.shields.io/github/release/vn7n24fzkq/github-profile-summary-cards.svg?style=for-the-badge&logo=semantic-release&color=f5bde6&logoColor=D9E0EE&labelColor=302D41"/></a>
+      <a href="https://www.conventionalcommits.org/en/v1.0.0/">
+      <img alt="conventionalcommits" src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?style=for-the-badge&logo=conventionalcommits&color=ee99a0&logoColor=D9E0EE&labelColor=302D41"></a>
+      <a href="https://github.com/vn7n24fzkq/github-profile-summary-cards/actions/workflows/github-action.yml">
+      <img alt="testandlint" src="https://img.shields.io/github/actions/workflow/status/vn7n24fzkq/github-profile-summary-cards/test-and-lint.yml?branch=main&label=Test%20and%20Lint&style=for-the-badge&color=a6da95"></a>
+   </p> -->
+</div>
 
-Check the [docs](https://Andrew-Velox.github.io/codeforces-stats-vlx/) for information on how to use the API.
+<div align="center">
+<p>
+<a href="https://github-profile-summary-cards.vercel.app/demo.html">Get your own cards now!!</a>
+</p>
 
-## Features
 
-- 📈 Clean and simple Codeforces stats
-- 🎨 Multiple themes - [Theme](docs/themes.md)
-- ⚙️ Fully customizable - [Customization](docs/customization.md)
-- 🍀 Open source - [MIT License](https://github.com/Andrew-Velox/codeforces-stats-vlx/blob/master/LICENSE)
+[![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist)](https://codeforces.com/profile/tourist)
+[![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=dark)](https://codeforces.com/profile/tourist)
 
-Want to contribute? Feel free to open a pull request!
+
+
+</div>
 
 ## Usage
 
@@ -26,13 +47,13 @@ Simply copy the code below, paste it into your `README.md`, and change the usern
 Preview:
 
 <p align="center">
-  <img alt="Codeforces Stats" src="https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz" />
+  <img alt="Codeforces Stats" src="https://codeforces-stats-vlx.vercel.app/api/card?username=tourist" />
 </p>
 
 Want a hyperlink? Try this:
 
 ```md
-[![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz)](https://codeforces.com/profile/yalniz)
+[![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist)](https://codeforces.com/profile/tourist)
 ```
 
 ## Themes
@@ -40,7 +61,7 @@ Want a hyperlink? Try this:
 |   |   |   |   |   |
 |:---:|:---:|:---:|:---:|:---:|
 |default|dark|nord_bright|nord_dark|transparent|
-|![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz&theme=default)|![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz&theme=dark)| ![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz&theme=nord_bright)|![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz&theme=nord_dark)|![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz&theme=transparent)|
+|![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=default)|![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=dark)| ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=nord_bright)|![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=nord_dark)|![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=transparent)|
 <!-- |gruvbox|monokai|nord_bright|nord_dark|radical|
 |![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz)|![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz)| ![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz)|![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz)  |![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz)|
 |solarized|solarized_dark|tokyonight|vue|zenburn|
