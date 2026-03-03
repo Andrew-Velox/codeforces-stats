@@ -79,11 +79,7 @@ export default async function handler(req, res) {
       `max-age=${cacheSeconds / 2}, s-maxage=${cacheSeconds}, stale-while-revalidate=${CONSTANTS.ONE_DAY}`
     );
 
-    disable_animations = disable_animations === "true";
-    force_username = force_username === "true";
-    show_icons = show_icons !== "false";
-
-    const name = force_username || fullName === "" ? handle : fullName;
+    const name = handle; // Always use handle as metadata name
     const year = registrationTimeSeconds
       ? new Date(registrationTimeSeconds * 1000).getFullYear()
       : "N/A";
@@ -143,8 +139,8 @@ export default async function handler(req, res) {
         tag3_color: TAG_COLORS[2],
         tag3_dash: `0 0`, 
         tag3_offset: "0",
-        animation: !disable_animations,
-        show_icons,
+        animation: true,    // Force animation enabled
+        show_icons: true,   // Force icons enabled
         theme: {
           ...themes["default"],
           ...themes[theme],

@@ -4,10 +4,7 @@ import qs from "fast-querystring";
 
 const defaultOption = {
   username: "yalniz",
-  theme: "github_dark",
-  disable_animations: false,
-  show_icons: true,
-  force_username: true,
+  theme: "default",
 };
 
 const useOption = () => {

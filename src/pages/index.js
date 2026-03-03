@@ -153,39 +153,6 @@ export default function Home() {
                       })}
                     />
                   </Form.Item>
-                  <Form.Item
-                    className="form-item"
-                    label="Animation"
-                    name="disable_animations"
-                    layout="inline"
-                  >
-                    <Radio.Group>
-                      <Radio value={false}>Enable</Radio>
-                      <Radio value={true}>Disable</Radio>
-                    </Radio.Group>
-                  </Form.Item>
-                  <Form.Item
-                    className="form-item"
-                    label="Show Icons"
-                    name="show_icons"
-                    layout="inline"
-                  >
-                    <Radio.Group>
-                      <Radio value={true}>Enable</Radio>
-                      <Radio value={false}>Disable</Radio>
-                    </Radio.Group>
-                  </Form.Item>
-                  <Form.Item
-                    className="form-item"
-                    label="Title"
-                    name="force_username"
-                    layout="inline"
-                  >
-                    <Radio.Group>
-                      <Radio value={true}>Username</Radio>
-                      <Radio value={false}>Full Name</Radio>
-                    </Radio.Group>
-                  </Form.Item>
                   <Form.Item className="form-item">
                     <Space className="submit-wrapper">
                       <Button
