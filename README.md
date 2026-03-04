@@ -38,19 +38,16 @@
 
 |   |   |   |   |   |
 |:---:|:---:|:---:|:---:|:---:|
-|default|dark|nord_bright|nord_dark|transparent|
-| ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=default) | ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=dark) | ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=nord_bright) | ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=nord_dark) | ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=transparent)|
+|default|dark|tokyonight|vue|nord_dark|
+| ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=default) | ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=dark) | ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=tokyonight) | ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=vue) | ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=nord_dark)|
+|gruvbox|monokai|nord_bright|zenburn|radical|
+|![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz&theme=gruvbox)|![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz&theme=monokai)| ![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz&theme=nord_bright)|![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz&theme=zenburn)  |![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz&theme=radical)|
+|solarized|solarized_dark|transparent|
+|![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz&theme=solarized)| ![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz&theme=solarized_dark)| ![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz&theme=transparent)|
 
 
-<!-- |gruvbox|monokai|nord_bright|nord_dark|radical|
-|![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz)|![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz)| ![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz)|![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz)  |![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz)|
-|solarized|solarized_dark|tokyonight|vue|zenburn|
-|![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz)|![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz)| ![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz)|![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz)  |![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz)|
-|transparent|
-|![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz&theme=transparent)| -->
 
-
-more themes are coming soon!
+More themes are coming soon!..
 <!-- [More themes]() -->
 
 
