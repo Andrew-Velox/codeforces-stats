@@ -46,8 +46,7 @@
 |![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=solarized)| ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=solarized_dark)| ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=transparent)|
 
 
-
-More themes are coming soon!..
+#### More themes are coming soon!..
 <!-- [More themes]() -->
 
 
