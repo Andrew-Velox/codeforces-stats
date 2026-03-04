@@ -1,4 +1,6 @@
 import axios from "axios";
+import fs from "fs";
+import path from "path";
 import { get_stats } from "@/fetcher.js";
 import themes from "@/themes.js";
 import {
@@ -25,6 +27,7 @@ export default async function handler(req, res) {
     tag_2_color,
     tag_3_color,
     chart_total_color,
+    box_border_color,
     cache_seconds,
     disable_animations,
     show_icons,
@@ -128,6 +131,7 @@ export default async function handler(req, res) {
       ...(tag_2_color && { tag_2_color }),
       ...(tag_3_color && { tag_3_color }),
       ...(chart_total_color && { chart_total_color }),
+      ...(box_border_color && { box_border_color }),
     };
 
     if (!themeConfig.chart_total_color) {
@@ -139,9 +143,19 @@ export default async function handler(req, res) {
     const t1Color = themeConfig.tag_1_color ? `#${themeConfig.tag_1_color}` : TAG_COLORS[0];
     const t2Color = themeConfig.tag_2_color ? `#${themeConfig.tag_2_color}` : TAG_COLORS[1];
     const t3Color = themeConfig.tag_3_color ? `#${themeConfig.tag_3_color}` : TAG_COLORS[2];
+    
+    let logo_b64 = "";
+    try {
+      const imgPath = path.join(process.cwd(), "src", "images", "logo.png");
+      const imgBuffer = fs.readFileSync(imgPath);
+      logo_b64 = `data:image/png;base64,${imgBuffer.toString("base64")}`;
+    } catch (err) {
+      console.error("Failed to read logo image:", err);
+    }
 
     res.send(
       renderTemplate("card.svg", {
+        logo_b64,
         name,
         handle,
         year,

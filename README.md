@@ -39,7 +39,9 @@
 |   |   |   |   |   |
 |:---:|:---:|:---:|:---:|:---:|
 |default|dark|nord_bright|nord_dark|transparent|
-|![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=default)|![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=dark)| ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=nord_bright)|![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=nord_dark)|![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=transparent)|
+| ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=default) | ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=dark) | ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=nord_bright) | ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=nord_dark) | ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=transparent)|
+
+
 <!-- |gruvbox|monokai|nord_bright|nord_dark|radical|
 |![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz)|![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz)| ![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz)|![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz)  |![](https://codeforces-stats-vlx.vercel.app/api/card?username=yalniz)|
 |solarized|solarized_dark|tokyonight|vue|zenburn|
