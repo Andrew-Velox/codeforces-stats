@@ -162,16 +162,17 @@ const themes = {
   },
 
   zenburn: {
-    title_color: "000",
-    icon_color: "dfaf8f",
-    text_color: "000",
+    title_color: "fff",
+    // icon_color: "dfaf8f",
+    icon_color: "fff",
+    text_color: "fff",
     bg_color: "3f3f3f",
     border_color: "4f4f4f",
     box_border_color: "4f4f4f",
     tag_1_color: "cc9393",
     tag_2_color: "7f9f7f",
     tag_3_color: "f0dfaf",
-    chart_total_color: "000",
+    chart_total_color: "fff",
   }
   // tokyonight: {
   //   title_color: "fff",
