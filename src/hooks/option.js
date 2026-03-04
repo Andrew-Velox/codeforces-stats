@@ -5,18 +5,21 @@ import qs from "fast-querystring";
 const defaultOption = {
   username: "yalniz",
   theme: "default",
+  template: "card",
 };
 
 const useOption = () => {
-  const [options, setOptions] = useLocalStorageState("options_v2", {
+  const [options, setOptions] = useLocalStorageState("options_v3", {
     defaultValue: defaultOption,
   });
-  const [imageUrl, setImageUrl] = useState(`/api/card?${qs.stringify(options)}`);
+  const [imageUrl, setImageUrl] = useState(`/api/${options.template || "card"}?${qs.stringify({ username: options.username, theme: options.theme })}`);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
 
   const updateImage = (newOptions) => {
-    const newImageUrl = `/api/card?${qs.stringify(newOptions)}`;
+    const endpoint = newOptions.template || "card";
+    const { template, ...queryParams } = newOptions;
+    const newImageUrl = `/api/${endpoint}?${qs.stringify(queryParams)}`;
     if (newImageUrl != imageUrl || error) setLoading(true);
     setError(false);
     setImageUrl(newImageUrl);

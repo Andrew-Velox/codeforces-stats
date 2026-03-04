@@ -143,6 +143,14 @@ export default function Home() {
                       })}
                     />
                   </Form.Item>
+                  <Form.Item className="form-item" label="Template" name="template">
+                    <Select
+                      options={[
+                        { value: "card", label: "Card" },
+                        { value: "graph", label: "Rating Graph" },
+                      ]}
+                    />
+                  </Form.Item>
                   <Form.Item className="form-item">
                     <Space className="submit-wrapper">
                       

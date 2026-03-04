@@ -1,5 +1,5 @@
 import { capitalize } from "@/common.js";
-import { api, last_rating_cache, last_stats_cache } from "@/fetcher-utils.js";
+import { api, last_rating_cache, last_stats_cache, last_graph_cache } from "@/fetcher-utils.js";
 
 function fetch_error_handler(fetch, username, last_cache) {
   return new Promise((resolve, reject) => {
@@ -169,5 +169,48 @@ export function get_stats(username, cache_seconds) {
       }),
     username,
     last_stats_cache
+  );
+}
+
+export function get_rating_history(username, cache_seconds) {
+  const apiConfig = {
+    cache: {
+      ttl: cache_seconds * 1000,
+    },
+  };
+  return fetch_error_handler(
+    () =>
+      new Promise((resolve, reject) => {
+        Promise.all([
+          api.get(`/user.info?handles=${username}`, apiConfig),
+          api.get(`/user.rating?handle=${username}`, apiConfig),
+        ])
+          .then((responses) => {
+            const userInfo = responses[0].data.result[0];
+            const ratingChanges = responses[1].data.result;
+
+            const res = {
+              handle: userInfo.handle || username,
+              rating: userInfo.rating || 0,
+              maxRating: userInfo.maxRating || 0,
+              ratingChanges,
+            };
+
+            try {
+              last_graph_cache.set(username, res);
+            } catch (error) {
+              console.error(error);
+            }
+            resolve(res);
+          })
+          .catch((error) => {
+            console.error(error);
+            if (error.response && error.response.status === 400)
+              reject({ status: 400, error: "Codeforces Handle Not Found" });
+            else reject({ status: 500, error: "Codeforces Server Error" });
+          });
+      }),
+    username,
+    last_graph_cache
   );
 }
