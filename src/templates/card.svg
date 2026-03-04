@@ -54,18 +54,18 @@
       <text x="0" y="18" text-anchor="middle" class="muted" style="font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Solved</text>
     </g>
 
-    <g transform="translate(0, 115)">
+    <g transform="translate(-40, 110)">
       <g transform="translate(0, 0)">
-        <circle cx="-60" cy="0" r="5" fill="{{ tag1_color }}" />
-        <text x="-50" y="4" class="chart-label" style="font-weight: 700;">{{ tag1_name }} ({{ tag1_count }})</text>
+        <circle cx="0" cy="0" r="4" fill="{{ tag1_color }}" />
+        <text x="12" y="4" class="chart-label">{{ tag1_name }}: {{ tag1_count }}</text>
       </g>
-
-      <g transform="translate(0, 22)">
-        <circle cx="-85" cy="0" r="4" fill="{{ tag2_color }}" />
-        <text x="-77" y="4" class="chart-label">{{ tag2_name }} ({{ tag2_count }})</text>
-        
-        <circle cx="7" cy="0" r="4" fill="{{ tag3_color }}" />
-        <text x="15" y="4" class="chart-label">{{ tag3_name }} ({{ tag3_count }})</text>
+      <g transform="translate(0, 18)">
+        <circle cx="0" cy="0" r="4" fill="{{ tag2_color }}" />
+        <text x="12" y="4" class="chart-label">{{ tag2_name }}: {{ tag2_count }}</text>
+      </g>
+      <g transform="translate(0, 36)">
+        <circle cx="0" cy="0" r="4" fill="{{ tag3_color }}" />
+        <text x="12" y="4" class="chart-label">{{ tag3_name }}: {{ tag3_count }}</text>
       </g>
     </g>
   </g>
@@ -73,38 +73,59 @@
   <g transform="translate(260, 35)">
     <g transform="translate(0, 0)">
       <circle cx="25" cy="25" r="25" fill="#f3f4f6" stroke="#e5e7eb" stroke-width="1.5" />
-      <image href="{{ avatar_b64 }}" x="1" y="1" width="48" height="48"
-             clip-path="url(#avatarClip)" preserveAspectRatio="xMidYMid slice" />
-      <text x="65" y="18" class="title color-max-rank" id="name">{{ handle }}</text>
+      <image href="{{ avatar_b64 }}" x="1" y="1" width="48" height="48" clip-path="url(#avatarClip)" preserveAspectRatio="xMidYMid slice" />
+      <svg x="65" y="4" width="15" height="15" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.5 3.5L3.5 6.5L6 2L8.5 6.5L10.5 3.5L9.5 9H2.5L1.5 3.5Z" fill="{{ max_rank_color }}" stroke="{{ max_rank_color }}" stroke-width="1" stroke-linejoin="round"/>
+        <rect x="2" y="10" width="8" height="1.5" rx="0.5" fill="{{ max_rank_color }}"/>
+      </svg>
+      <text x="83" y="18" class="title color-max-rank" id="name">{{ handle }}</text>
       <text x="65" y="38" class="handle">{{ full_name }}</text>
       <text x="65" y="54" class="muted">Member since {{ year }}</text>
     </g>
 
     <g transform="translate(0, 97)">
       <rect x="0" y="-30" width="250" height="60" rx="6" ry="6" class="stat-box" />
-      <text x="125" y="0" text-anchor="middle" class="rating-value color-rank" id="rating">{{ contest_rating }}</text>
-      <text x="125" y="20" text-anchor="middle" class="rating-label">Current Rating</text>
+      <text x="125" y="-5" text-anchor="middle" class="rating-value color-max-rank" id="rank" style="font-size: 20px;">{{ max_rank }}</text>
+      <svg x="80" y="9" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 4.5L5.5 1.5L10 4.5L10 6.5L5.5 3.5L1 6.5Z" fill="#{{ theme.icon_color }}" stroke="#{{ theme.icon_color }}" stroke-width="0.5" stroke-linejoin="round"/>
+        <path d="M1 8.5L5.5 5.5L10 8.5L10 10.5L5.5 7.5L1 10.5Z" fill="#{{ theme.icon_color }}" stroke="#{{ theme.icon_color }}" stroke-width="0.5" stroke-linejoin="round"/>
+      </svg>
+      <text x="125" y="20" text-anchor="middle" class="rating-label">Max Rank</text>
     </g>
 
     <g transform="translate(0, 135)">
       <g transform="translate(0, 0)">
         <rect x="0" y="0" width="120" height="45" rx="6" ry="6" class="stat-box" />
-        <text x="12" y="18" class="stat-label">Max Rating</text>
+        <svg x="12" y="8" width="11" height="11" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 1L7.5 4.2H11L8.4 6.4L9.4 10L6 7.8L2.6 10L3.6 6.4L1 4.2H4.5Z" fill="#{{ theme.icon_color }}"/>
+        </svg>
+        <text x="26" y="18" class="stat-label">Max Rating</text>
         <text x="12" y="36" class="stat-value color-max-rank" id="max-rating">{{ max_rating }}</text>
       </g>
       <g transform="translate(130, 0)">
         <rect x="0" y="0" width="120" height="45" rx="6" ry="6" class="stat-box" />
-        <text x="12" y="18" class="stat-label">Contests</text>
+        <svg x="12" y="8" width="11" height="11" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="6" cy="5" r="3.5" stroke="#{{ theme.icon_color }}" stroke-width="1.2"/>
+          <path d="M3.5 8L2.5 11L6 9.5L9.5 11L8.5 8" stroke="#{{ theme.icon_color }}" stroke-width="1.2" stroke-linejoin="round"/>
+        </svg>
+        <text x="26" y="18" class="stat-label">Contests</text>
         <text x="12" y="36" class="stat-value" id="contests">{{ contests }}</text>
       </g>
       <g transform="translate(0, 55)">
         <rect x="0" y="0" width="120" height="45" rx="6" ry="6" class="stat-box" />
-        <text x="12" y="18" class="stat-label">Max Rank</text>
-        <text x="12" y="36" class="stat-value color-max-rank" id="rank">{{ max_rank }}</text>
+        <svg x="12" y="8" width="11" height="11" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polyline points="1,10 4,5.5 7,8 11,2.5" stroke="#{{ theme.icon_color }}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <polyline points="8,2.5 11,2.5 11,5.5" stroke="#{{ theme.icon_color }}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <text x="26" y="18" class="stat-label">Current Rating</text>
+        <text x="12" y="36" class="stat-value color-rank" id="rating">{{ contest_rating }}</text>
       </g>
       <g transform="translate(130, 55)">
         <rect x="0" y="0" width="120" height="45" rx="6" ry="6" class="stat-box" />
-        <text x="12" y="18" class="stat-label">Contributions</text>
+        <svg x="12" y="8" width="11" height="11" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="4" height="4" rx="1" fill="#{{ theme.icon_color }}" fill-opacity="0.4"/> <rect x="7" y="1" width="4" height="4" rx="1" fill="#{{ theme.icon_color }}" /> <rect x="1" y="7" width="4" height="4" rx="1" fill="#{{ theme.icon_color }}"/> <rect x="7" y="7" width="4" height="4" rx="1" fill="#{{ theme.icon_color }}" fill-opacity="0.7"/>
+        </svg>
+        <text x="26" y="18" class="stat-label">Contributions</text>
         <text x="12" y="36" class="stat-value" id="contribution">{{ contributions }}</text>
       </g>
     </g>
