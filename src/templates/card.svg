@@ -57,15 +57,15 @@
     <g transform="translate(0, 115)">
       <g transform="translate(0, 0)">
         <circle cx="-60" cy="0" r="5" fill="{{ tag1_color }}" />
-        <text x="-50" y="4" class="chart-label" style="font-weight: 700;">{{ tag1_name }} ( {{ tag1_count }} )</text>
+        <text x="-50" y="4" class="chart-label" style="font-weight: 700;">{{ tag1_name }} ({{ tag1_count }})</text>
       </g>
 
       <g transform="translate(0, 22)">
         <circle cx="-85" cy="0" r="4" fill="{{ tag2_color }}" />
-        <text x="-77" y="4" class="chart-label">{{ tag2_name }} ( {{ tag2_count }} )</text>
+        <text x="-77" y="4" class="chart-label">{{ tag2_name }} ({{ tag2_count }})</text>
         
-        <circle cx="15" cy="0" r="4" fill="{{ tag3_color }}" />
-        <text x="24" y="4" class="chart-label">{{ tag3_name }} ( {{ tag3_count }} )</text>
+        <circle cx="7" cy="0" r="4" fill="{{ tag3_color }}" />
+        <text x="15" y="4" class="chart-label">{{ tag3_name }} ({{ tag3_count }})</text>
       </g>
     </g>
   </g>
