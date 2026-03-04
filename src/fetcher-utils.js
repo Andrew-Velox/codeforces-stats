@@ -33,3 +33,4 @@ class KVCache {
 
 export const last_rating_cache = new KVCache("rating");
 export const last_stats_cache = new KVCache("stats");
+export const last_graph_cache = new KVCache("graph");
