@@ -12,6 +12,7 @@ import {
 
 const CHART_WIDTH = 420;
 const CHART_HEIGHT = 115;
+const HANDLE_CHAR_LIMIT = 12; // Threshold for switching to compressed template
 
 const RATING_BANDS = [
   { min: 0, max: 1200, color: COLORS.NEWBIE },
@@ -177,19 +178,24 @@ export default async function handler(req, res) {
     }
 
     res.send(
-      renderTemplate("graph.svg", {
-        handle,
-        logo_b64,
-        line_color: lineColor,
-        max_rank_color: maxRankColor,
-        line_path: linePath,
-        area_path: areaPath,
-        dots: chartPoints,
-        y_ticks: yTicks,
-        x_ticks: xTicks,
-        rating_bands: ratingBands,
-        theme: themeConfig,
-      })
+      renderTemplate(
+        handle && handle.length <= HANDLE_CHAR_LIMIT
+          ? "default/graph.svg"
+          : "compressed/graph.svg",
+        {
+          handle,
+          logo_b64,
+          line_color: lineColor,
+          max_rank_color: maxRankColor,
+          line_path: linePath,
+          area_path: areaPath,
+          dots: chartPoints,
+          y_ticks: yTicks,
+          x_ticks: xTicks,
+          rating_bands: ratingBands,
+          theme: themeConfig,
+        }
+      )
     );
   } catch ({ status, error }) {
     res.setHeader("Content-Type", "text/plain");

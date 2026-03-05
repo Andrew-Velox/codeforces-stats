@@ -8,7 +8,7 @@ import {
   clamp_value,
 } from "@/common.js";
 
-
+const HANDLE_CHAR_LIMIT = 12; // Threshold for switching to compressed template
 
 export default async function handler(req, res) {
   const { username, cache_seconds, theme = "default", bg_color } = req.query;
@@ -49,16 +49,21 @@ export default async function handler(req, res) {
     }
 
     res.send(
-      renderTemplate("badge.svg", {
-        handle,
-        rating,
-        color: get_color_from_rating(rating),
-        max_rank_color: get_color_from_rating(rating),
-        bg_color: bg_color || themes[theme].bg_color,
-        title_color: themes[theme].title_color,
-        border_color: themes[theme].border_color,
-        avatar_b64,
-      })
+      renderTemplate(
+        handle && handle.length <= HANDLE_CHAR_LIMIT
+          ? "default/badge.svg"
+          : "compressed/badge.svg",
+        {
+          handle,
+          rating,
+          color: get_color_from_rating(rating),
+          max_rank_color: get_color_from_rating(rating),
+          bg_color: bg_color || themes[theme].bg_color,
+          title_color: themes[theme].title_color,
+          border_color: themes[theme].border_color,
+          avatar_b64,
+        }
+      )
     );
   } catch ({ status, error }) {
     res.setHeader("Content-Type", "text/plain");

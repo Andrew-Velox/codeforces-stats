@@ -12,6 +12,7 @@ import {
 
 const TAG_COLORS = ["#06b6d4", "#ec4899", "#eab308"];
 const DONUT_C = 2 * Math.PI * 70; // circumference for r=70
+const HANDLE_CHAR_LIMIT = 12; // Threshold for switching to compressed template
 
 export default async function handler(req, res) {
   let {
@@ -154,43 +155,48 @@ export default async function handler(req, res) {
     }
 
     res.send(
-      renderTemplate("card.svg", {
-        logo_b64,
-        name,
-        handle,
-        year,
-        contest_rating: rating,
-        max_rating: maxRating,
-        rank,
-        max_rank: maxRank,
-        contests: contestsCount,
-        accepted: problemsSolved,
-        contributions: contribution,
-        rank_color: rankColor,
-        max_rank_color: maxRankColor,
-        rank_color_dark: rankColor,
-        max_rank_color_dark: maxRankColor,
-        avatar_b64,
-        full_name: fullName, // Pass raw full name for subtitle
-        tag1_name: tags[0].name,
-        tag1_count: tags[0].count,
-        tag1_color: t1Color,
-        tag1_dash: `${L1.toFixed(2)} ${DONUT_C.toFixed(2)}`,
-        tag1_offset: "0",
-        tag2_name: tags[1].name,
-        tag2_count: tags[1].count,
-        tag2_color: t2Color,
-        tag2_dash: `${(L1 + L2).toFixed(2)} ${DONUT_C.toFixed(2)}`,
-        tag2_offset: "0",
-        tag3_name: tags[2].name,
-        tag3_count: tags[2].count,
-        tag3_color: t3Color,
-        tag3_dash: `0 0`, 
-        tag3_offset: "0",
-        animation: true,    // Force animation enabled
-        show_icons: true,   // Force icons enabled
-        theme: themeConfig,
-      })
+      renderTemplate(
+        handle && handle.length <= HANDLE_CHAR_LIMIT
+          ? "default/card.svg"
+          : "compressed/card.svg",
+        {
+          logo_b64,
+          name,
+          handle,
+          year,
+          contest_rating: rating,
+          max_rating: maxRating,
+          rank,
+          max_rank: maxRank,
+          contests: contestsCount,
+          accepted: problemsSolved,
+          contributions: contribution,
+          rank_color: rankColor,
+          max_rank_color: maxRankColor,
+          rank_color_dark: rankColor,
+          max_rank_color_dark: maxRankColor,
+          avatar_b64,
+          full_name: fullName, // Pass raw full name for subtitle
+          tag1_name: tags[0].name,
+          tag1_count: tags[0].count,
+          tag1_color: t1Color,
+          tag1_dash: `${L1.toFixed(2)} ${DONUT_C.toFixed(2)}`,
+          tag1_offset: "0",
+          tag2_name: tags[1].name,
+          tag2_count: tags[1].count,
+          tag2_color: t2Color,
+          tag2_dash: `${(L1 + L2).toFixed(2)} ${DONUT_C.toFixed(2)}`,
+          tag2_offset: "0",
+          tag3_name: tags[2].name,
+          tag3_count: tags[2].count,
+          tag3_color: t3Color,
+          tag3_dash: `0 0`, 
+          tag3_offset: "0",
+          animation: true,    // Force animation enabled
+          show_icons: true,   // Force icons enabled
+          theme: themeConfig,
+        }
+      )
     );
   } catch ({ status, error }) {
     res.setHeader("Content-Type", "text/plain");
