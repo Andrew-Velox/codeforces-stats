@@ -56,6 +56,7 @@ export default async function handler(req, res) {
         max_rank_color: get_color_from_rating(rating),
         bg_color: bg_color || themes[theme].bg_color,
         title_color: themes[theme].title_color,
+        border_color: themes[theme].border_color,
         avatar_b64,
       })
     );
