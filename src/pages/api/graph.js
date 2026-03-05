@@ -1,5 +1,7 @@
 import { get_rating_history } from "@/fetcher.js";
 import themes from "@/themes.js";
+import fs from "fs";
+import path from "path";
 import {
   renderTemplate,
   get_color_from_rating,
@@ -142,6 +144,16 @@ export default async function handler(req, res) {
 
     // ── Theme config ────────────────────────────────────────
     const lineColor = get_color_from_rating(rating);
+    const maxRankColor = get_color_from_rating(maxRating);
+
+    let logo_b64 = "";
+    try {
+      const imgPath = path.join(process.cwd(), "src", "images", "logo.png");
+      const imgBuffer = fs.readFileSync(imgPath);
+      logo_b64 = `data:image/png;base64,${imgBuffer.toString("base64")}`;
+    } catch (err) {
+      console.error("Failed to read logo image:", err);
+    }
 
     const themeConfig = {
       ...themes["default"],
@@ -167,7 +179,9 @@ export default async function handler(req, res) {
     res.send(
       renderTemplate("graph.svg", {
         handle,
+        logo_b64,
         line_color: lineColor,
+        max_rank_color: maxRankColor,
         line_path: linePath,
         area_path: areaPath,
         dots: chartPoints,
