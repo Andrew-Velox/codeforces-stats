@@ -28,7 +28,7 @@
 
 
 
-[![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/badge?username=tourist&theme=radical)](https://codeforces.com/profile/tourist)<br>
+[![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/badge?username=tourist&v1&theme=default)](https://codeforces.com/profile/tourist)<br>
 [![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=dark)](https://codeforces.com/profile/tourist)
 [![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&theme=default)](https://codeforces.com/profile/tourist)
 
