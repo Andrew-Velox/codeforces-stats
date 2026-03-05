@@ -1,34 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="125.1" height="20">
-    <linearGradient id="smooth" x2="0" y2="100%">
-        <stop offset="0" stop-color="#bbb" stop-opacity=".1" />
-        <stop offset="1" stop-opacity=".1" />
-    </linearGradient>
-    <clipPath id="round">
-        <rect width="125.1" height="20" rx="3" fill="#fff" />
+<svg xmlns="http://www.w3.org/2000/svg" width="230" height="44" viewBox="0 0 230 44" role="img" aria-label="Codeforces Badge for {{ handle }}">
+  <title>{{ handle }} | Codeforces | {{ rating }}</title>
+  <defs>
+    <clipPath id="pillClip">
+      <rect width="230" height="44" rx="22"/>
     </clipPath>
-    <g clip-path="url(#round)">
-        <rect width="87.1" height="20" fill="#555" />
-        <rect x="87.1" width="38.0" height="20" id="background-color" fill="{{ color }}" />
-    </g>
-    <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif"
-        font-size="110">
-        <svg x="5" y="3" class="logo" width="14" height="14" viewBox="0 0 32 25" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <rect y="6" width="8" height="18.125" rx="2" fill="#FFC107" />
-            <rect x="24" y="10.125" width="8" height="14" rx="2" fill="#F44336" />
-            <rect x="12" width="8" height="24.125" rx="2" fill="#2196F3" />
-        </svg>
-        <text x="530.5" y="150" fill="#010101" fill-opacity=".3" transform="scale(0.1)"
-            textLength="601.0"
-            lengthAdjust="spacing">codeforces
-        </text>
-        <text x="530.5" y="140" transform="scale(0.1)" textLength="601.0" lengthAdjust="spacing">
-            codeforces</text>
-        <text x="1051.0" y="150" fill="#010101" fill-opacity=".3" transform="scale(0.1)"
-            textLength="280.0"
-            lengthAdjust="spacing">{{ rating }}
-        </text>
-        <text x="1051.0" y="140" transform="scale(0.1)" textLength="280.0" lengthAdjust="spacing"
-            id="rating">{{ rating }}</text>
-    </g>
+    <clipPath id="badgeAvatarClip">
+      <circle cx="22" cy="22" r="16"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#pillClip)">
+    <!-- Dark background -->
+    <rect width="230" height="44" fill="#{{ bg_color }}"/>
+    <!-- Rating-colored section on the right -->
+    <rect x="155" y="0" width="75" height="44" fill="{{ color }}"/>
+  </g>
+
+  <!-- Avatar glow -->
+  <circle cx="22" cy="22" r="18" fill="white" fill-opacity="0.08"/>
+  <!-- Avatar image -->
+  <image href="{{ avatar_b64 }}" x="6" y="6" width="32" height="32" clip-path="url(#badgeAvatarClip)"/>
+  <!-- Avatar border -->
+  <circle cx="22" cy="22" r="16" fill="none" stroke="white" stroke-width="1.5" stroke-opacity="0.35"/>
+
+  <!-- Crown icon -->
+  <svg x="45" y="15" width="13" height="13" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1.5 3.5L3.5 6.5L6 2L8.5 6.5L10.5 3.5L9.5 9H2.5L1.5 3.5Z" fill="{{ max_rank_color }}" stroke="{{ max_rank_color }}" stroke-width="1" stroke-linejoin="round"/>
+    <rect x="2" y="10" width="8" height="1.5" rx="0.5" fill="{{ max_rank_color }}"/>
+  </svg>
+
+  <!-- Handle text -->
+  <text x="63" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#{{ title_color }}" letter-spacing="0.2">{{ handle }}</text>
+
+  <!-- Separator -->
+  <line x1="153" y1="12" x2="153" y2="32" stroke="white" stroke-width="1" stroke-opacity="0.25"/>
+
+  <!-- Rating number, centered in the colored section -->
+  <text x="192" y="27" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="white">{{ rating }}</text>
 </svg>

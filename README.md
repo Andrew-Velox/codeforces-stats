@@ -47,7 +47,7 @@
 |![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=solarized)| ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=solarized_dark)| ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=transparent)|
 
 
-<details> <summary> Graph Themes </summary>
+<details> <summary> Rating Graph Themes </summary>
 
 |   |   |   |   |   |
 |:---:|:---:|:---:|:---:|:---:|

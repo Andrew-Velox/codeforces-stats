@@ -148,6 +148,7 @@ export default function Home() {
                       options={[
                         { value: "card", label: "Card" },
                         { value: "graph", label: "Rating Graph" },
+                        { value: "badge", label: "Badge" },
                       ]}
                     />
                   </Form.Item>
