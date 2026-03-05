@@ -16,6 +16,9 @@
     <rect x="155" y="0" width="75" height="44" fill="{{ color }}"/>
   </g>
 
+  <!-- Pill border -->
+  <rect x="0.75" y="0.75" width="228.5" height="42.5" rx="21.25" fill="none" stroke="#{{ border_color }}" stroke-width="1.5"/>
+
   <!-- Avatar glow -->
   <circle cx="22" cy="22" r="18" fill="white" fill-opacity="0.08"/>
   <!-- Avatar image -->
