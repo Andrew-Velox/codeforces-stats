@@ -35,7 +35,7 @@
 </div>
 
 
-## Themes
+## Card Themes
 
 |   |   |   |   |   |
 |:---:|:---:|:---:|:---:|:---:|
@@ -47,37 +47,48 @@
 |![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=solarized)| ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=solarized_dark)| ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=transparent)|
 
 
+<details> <summary> Graph Themes </summary>
+
+|   |   |   |   |   |
+|:---:|:---:|:---:|:---:|:---:|
+|default|dark|tokyonight|vue|nord_dark|
+| ![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&theme=default) | ![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&theme=dark) | ![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&theme=tokyonight) | ![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&theme=vue) | ![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&theme=nord_dark)|
+|gruvbox|monokai|nord_bright|zenburn|radical|
+|![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&theme=gruvbox)|![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&theme=monokai)| ![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&theme=nord_bright)|![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&theme=zenburn)  |![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&theme=radical)|
+|solarized|solarized_dark|transparent|
+|![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&theme=solarized)| ![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&theme=solarized_dark)| ![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&theme=transparent)|
+
+
+</details>
+
 |  More themes are coming soon!.. |
 <!-- [More themes]() -->
 
 
+## How to use (API)
+### Profile details card
+![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=dark)
 
-## Usage
+`![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/card?username={username}&theme={theme_name})`
+- Accept url parameters
+  - theme
+    - Theme name
+  - username
+    - Username
+#### Want a hyperlink? Try this:
 
-### Stats card
+### Rating graph card
+![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&theme=vue)
 
-Simply copy the code below, paste it into your `README.md`, and change the username query parameter to your Codeforces username (case-insensitive).
+`![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/graph?username={username}&theme={theme_name})`
+- Accept url parameters
+  - theme
+    - Theme name
+  - username
+    - Username
+#### Want a hyperlink? Try this:
+`[![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/card?username={handle})](https://codeforces.com/profile/{handle})`
 
-```md
-![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/card?username={handle})
-```
-
-Preview:
-
-<p align="center">
-  <img alt="Codeforces Stats" src="https://codeforces-stats-vlx.vercel.app/api/card?username=tourist" />
-</p>
-
-## Change Theme:
-
-```md
-![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/card?username={handle}&theme={theme_name})
-```
-## Want a hyperlink? Try this:
-
-```md
-[![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/card?username={handle})](https://codeforces.com/profile/{handle})
-```
 <!-- 
 ### Rating badge
 
@@ -101,3 +112,4 @@ Please kindly follow [CONTRIBUTING.md](CONTRIBUTING.md) to get started. -->
 ## Inspirations
 
 - [RedHeadphone/codeforces-readme-stats](https://github.com/RedHeadphone/codeforces-readme-stats)
+- [vn7n24fzkq/github-profile-summary-cards](https://github.com/vn7n24fzkq/github-profile-summary-cards)
