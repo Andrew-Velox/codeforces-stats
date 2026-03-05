@@ -7,6 +7,9 @@
     <clipPath id="badgeAvatarClip">
       <circle cx="22" cy="22" r="16"/>
     </clipPath>
+    <clipPath id="handleClip">
+      <rect x="63" y="12" width="88" height="20"/>
+    </clipPath>
   </defs>
 
   <g clip-path="url(#pillClip)">
@@ -33,7 +36,18 @@
   </svg>
 
   <!-- Handle text -->
-  <text x="63" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#{{ title_color }}" letter-spacing="0.2">{{ handle }}</text>
+  <text
+    x="63"
+    y="27"
+    font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+    font-size="13"
+    font-weight="700"
+    fill="#{{ title_color }}"
+    letter-spacing="0.2"
+    clip-path="url(#handleClip)"
+    textLength="88"
+    lengthAdjust="spacingAndGlyphs"
+  >{{ handle }}</text>
 
   <!-- Separator -->
   <line x1="153" y1="12" x2="153" y2="32" stroke="white" stroke-width="1" stroke-opacity="0.25"/>
