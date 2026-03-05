@@ -4,7 +4,7 @@
   <!-- [English](./README.md) -->
   💙
    <p>
-      A tool to generate your github summary card for profile README. Inspired by <a href=https://github.com/RedHeadphone/codeforces-readme-stats>codeforces-readme-stats</a>
+      A tool to generate your codeforces stats card for profile README. Inspired by <a href=https://github.com/RedHeadphone/codeforces-readme-stats>codeforces-readme-stats</a>
    </p>
    <p>
       ⭐ This repo is just for fun, feel free to contribute! ⭐
