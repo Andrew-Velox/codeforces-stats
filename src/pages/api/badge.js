@@ -8,7 +8,6 @@ import {
   clamp_value,
 } from "@/common.js";
 
-const HANDLE_CHAR_LIMIT = 12; // Threshold for switching to compressed template
 
 export default async function handler(req, res) {
   const { username, cache_seconds, theme = "default", bg_color } = req.query;
@@ -49,10 +48,7 @@ export default async function handler(req, res) {
     }
 
     res.send(
-      renderTemplate(
-        handle && handle.length <= HANDLE_CHAR_LIMIT
-          ? "default/badge.svg"
-          : "compressed/badge.svg",
+      renderTemplate("badge.svg",
         {
           handle,
           rating,

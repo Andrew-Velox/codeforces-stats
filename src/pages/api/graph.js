@@ -12,7 +12,7 @@ import {
 
 const CHART_WIDTH = 420;
 const CHART_HEIGHT = 115;
-const HANDLE_CHAR_LIMIT = 12; // Threshold for switching to compressed template
+
 
 const RATING_BANDS = [
   { min: 0, max: 1200, color: COLORS.NEWBIE },
@@ -178,10 +178,7 @@ export default async function handler(req, res) {
     }
 
     res.send(
-      renderTemplate(
-        handle && handle.length <= HANDLE_CHAR_LIMIT
-          ? "default/graph.svg"
-          : "compressed/graph.svg",
+      renderTemplate("graph.svg",
         {
           handle,
           logo_b64,

@@ -44,9 +44,11 @@
     font-weight="700"
     fill="#{{ title_color }}"
     letter-spacing="0.2"
+    {% if handle|length > 12 %}
     clip-path="url(#handleClip)"
     textLength="88"
     lengthAdjust="spacingAndGlyphs"
+    {% endif %}
   >{{ handle }}</text>
 
   <!-- Separator -->

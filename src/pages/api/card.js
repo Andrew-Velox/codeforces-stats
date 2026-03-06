@@ -12,7 +12,7 @@ import {
 
 const TAG_COLORS = ["#06b6d4", "#ec4899", "#eab308"];
 const DONUT_C = 2 * Math.PI * 70; // circumference for r=70
-const HANDLE_CHAR_LIMIT = 12; // Threshold for switching to compressed template
+
 
 export default async function handler(req, res) {
   let {
@@ -155,10 +155,7 @@ export default async function handler(req, res) {
     }
 
     res.send(
-      renderTemplate(
-        handle && handle.length <= HANDLE_CHAR_LIMIT
-          ? "default/card.svg"
-          : "compressed/card.svg",
+      renderTemplate("card.svg",
         {
           logo_b64,
           name,

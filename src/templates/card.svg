@@ -10,6 +10,11 @@
     <clipPath id="tagClip">
       <rect x="-130" y="100" width="260" height="80" />
     </clipPath>
+
+    <clipPath id="handleClip">
+      <rect x="83" y="6" width="150" height="26" />
+    </clipPath>
+
   </defs>
 
   <style>
@@ -80,7 +85,17 @@
         <path d="M1.5 3.5L3.5 6.5L6 2L8.5 6.5L10.5 3.5L9.5 9H2.5L1.5 3.5Z" fill="{{ max_rank_color }}" stroke="{{ max_rank_color }}" stroke-width="1" stroke-linejoin="round"/>
         <rect x="2" y="10" width="8" height="1.5" rx="0.5" fill="{{ max_rank_color }}"/>
       </svg>
-      <text x="83" y="18" class="title color-max-rank" id="name">{{ handle }}</text>
+      <text
+        x="83"
+        y="20"
+        class="title color-max-rank"
+        id="name"
+        {% if handle|length > 12 %}
+        clip-path="url(#handleClip)"
+        textLength="150"
+        lengthAdjust="spacingAndGlyphs"
+        {% endif %}
+      >{{ handle }}</text>
       <text x="65" y="38" class="handle">{{ full_name }}</text>
       <text x="65" y="54" class="muted">Member since {{ year }}</text>
     </g>
