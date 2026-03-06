@@ -111,6 +111,8 @@
   - username
     - Username
 
+## Contributing
+Contributions are always welcome! Please feel free to submit a Pull Request.
 
 ## Inspirations
 
