@@ -12,7 +12,26 @@
     </clipPath>
   </defs>
 
-  <g clip-path="url(#pillClip)">
+  <style>
+    <![CDATA[
+    /* 9s cycle: fast ~2s reveal, holds ~7s, then resets */
+    @keyframes b-fade { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes b-bg-cycle     { 0%    {opacity:0} 3%  {opacity:1} 100%{opacity:1} }
+    @keyframes b-avatar-cycle { 0%,1% {opacity:0} 5% {opacity:1} 100%{opacity:1} }
+    @keyframes b-crown-cycle  { 0%,2% {opacity:0} 6% {opacity:1} 100%{opacity:1} }
+    @keyframes b-handle-cycle { 0%,3%{opacity:0} 7% {opacity:1} 100%{opacity:1} }
+    @keyframes b-sep-cycle    { 0%,4%{opacity:0} 8% {opacity:1} 100%{opacity:1} }
+    @keyframes b-rating-cycle { 0%,5%{opacity:0} 9% {opacity:1} 100%{opacity:1} }
+    .b-bg     { animation: b-bg-cycle     9s linear infinite; }
+    .b-avatar { animation: b-avatar-cycle 9s linear infinite; }
+    .b-crown  { animation: b-crown-cycle  9s linear infinite; }
+    .b-handle { animation: b-handle-cycle 9s linear infinite; }
+    .b-sep    { animation: b-sep-cycle    9s linear infinite; }
+    .b-rating { animation: b-rating-cycle 9s linear infinite; }
+    ]]>
+  </style>
+
+  <g clip-path="url(#pillClip)" class="b-bg">
     <!-- Dark background -->
     <rect width="230" height="44" fill="#{{ bg_color }}"/>
     <!-- Rating-colored section on the right -->
@@ -20,17 +39,17 @@
   </g>
 
   <!-- Pill border -->
-  <rect x="0.75" y="0.75" width="228.5" height="42.5" rx="21.25" fill="none" stroke="#{{ border_color }}" stroke-width="1.5"/>
+  <rect x="0.75" y="0.75" width="228.5" height="42.5" rx="21.25" fill="none" stroke="#{{ border_color }}" stroke-width="1.5" class="b-bg"/>
 
   <!-- Avatar glow -->
-  <circle cx="22" cy="22" r="18" fill="white" fill-opacity="0.08"/>
+  <circle cx="22" cy="22" r="18" fill="white" fill-opacity="0.08" class="b-avatar"/>
   <!-- Avatar image -->
-  <image href="{{ avatar_b64 }}" x="6" y="6" width="32" height="32" clip-path="url(#badgeAvatarClip)"/>
+  <image href="{{ avatar_b64 }}" x="6" y="6" width="32" height="32" clip-path="url(#badgeAvatarClip)" class="b-avatar"/>
   <!-- Avatar border -->
-  <circle cx="22" cy="22" r="16" fill="none" stroke="white" stroke-width="1.5" stroke-opacity="0.35"/>
+  <circle cx="22" cy="22" r="16" fill="none" stroke="white" stroke-width="1.5" stroke-opacity="0.35" class="b-avatar"/>
 
   <!-- Crown icon -->
-  <svg x="45" y="15" width="13" height="13" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg x="45" y="15" width="13" height="13" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="b-crown">
     <path d="M1.5 3.5L3.5 6.5L6 2L8.5 6.5L10.5 3.5L9.5 9H2.5L1.5 3.5Z" fill="{{ max_rank_color }}" stroke="{{ max_rank_color }}" stroke-width="1" stroke-linejoin="round"/>
     <rect x="2" y="10" width="8" height="1.5" rx="0.5" fill="{{ max_rank_color }}"/>
   </svg>
@@ -44,6 +63,7 @@
     font-weight="700"
     fill="#{{ title_color }}"
     letter-spacing="0.2"
+    class="b-handle"
     {% if handle|length > 12 %}
     clip-path="url(#handleClip)"
     textLength="88"
@@ -52,8 +72,8 @@
   >{{ handle }}</text>
 
   <!-- Separator -->
-  <line x1="153" y1="12" x2="153" y2="32" stroke="white" stroke-width="1" stroke-opacity="0.25"/>
+  <line x1="153" y1="12" x2="153" y2="32" stroke="white" stroke-width="1" stroke-opacity="0.25" class="b-sep"/>
 
   <!-- Rating number, centered in the colored section -->
-  <text x="192" y="27" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="white">{{ rating }}</text>
+  <text x="192" y="27" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="white" class="b-rating">{{ rating }}</text>
 </svg>
