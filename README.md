@@ -23,9 +23,9 @@
 
 
 
-[![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/badge?username=tourist&theme=default)](https://codeforces.com/profile/tourist)<br>
-[![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=dark)](https://codeforces.com/profile/tourist)
-[![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&theme=default)](https://codeforces.com/profile/tourist)
+[![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/badge?username=tourist&v1&theme=default)](https://codeforces.com/profile/tourist)<br>
+[![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&v1&theme=dark)](https://codeforces.com/profile/tourist)
+[![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&v1&theme=default)](https://codeforces.com/profile/tourist)
 
 
 </div>
@@ -36,11 +36,11 @@
 |   |   |   |   |   |
 |:---:|:---:|:---:|:---:|:---:|
 |default|dark|tokyonight|vue|nord_dark|
-| ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=default) | ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=dark) | ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=tokyonight) | ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=vue) | ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=nord_dark)|
+| ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&v1&theme=default) | ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&v1&theme=dark) | ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&v1&theme=tokyonight) | ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&v1&theme=vue) | ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&v1&theme=nord_dark)|
 |gruvbox|monokai|nord_bright|zenburn|radical|
-|![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=gruvbox)|![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=monokai)| ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=nord_bright)|![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=zenburn)  |![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=radical)|
+|![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&v1&theme=gruvbox)|![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&v1&theme=monokai)| ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&v1&theme=nord_bright)|![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&v1&theme=zenburn)  |![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&v1&theme=radical)|
 |solarized|solarized_dark|transparent|
-|![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=solarized)| ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=solarized_dark)| ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=transparent)|
+|![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&v1&theme=solarized)| ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&v1&theme=solarized_dark)| ![](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&v1&theme=transparent)|
 
 
 <details> <summary> Rating Graph Themes </summary>
@@ -48,11 +48,11 @@
 |   |   |   |   |   |
 |:---:|:---:|:---:|:---:|:---:|
 |default|dark|tokyonight|vue|nord_dark|
-| ![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&theme=default) | ![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&theme=dark) | ![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&theme=tokyonight) | ![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&theme=vue) | ![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&theme=nord_dark)|
+| ![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&v1&theme=default) | ![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&v1&theme=dark) | ![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&v1&theme=tokyonight) | ![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&v1&theme=vue) | ![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&v1&theme=nord_dark)|
 |gruvbox|monokai|nord_bright|zenburn|radical|
-|![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&theme=gruvbox)|![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&theme=monokai)| ![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&theme=nord_bright)|![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&theme=zenburn)  |![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&theme=radical)|
+|![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&v1&theme=gruvbox)|![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&v1&theme=monokai)| ![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&v1&theme=nord_bright)|![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&v1&theme=zenburn)  |![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&v1&theme=radical)|
 |solarized|solarized_dark|transparent|
-|![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&theme=solarized)| ![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&theme=solarized_dark)| ![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&theme=transparent)|
+|![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&v1&theme=solarized)| ![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&v1&theme=solarized_dark)| ![](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&v1&theme=transparent)|
 
 </details>
 
@@ -61,11 +61,11 @@
 |   |   |   |   |   |
 |:---:|:---:|:---:|:---:|:---:|
 |default|dark|tokyonight|vue|nord_dark|
-| ![](https://codeforces-stats-vlx.vercel.app/api/badge?username=tourist&theme=default) | ![](https://codeforces-stats-vlx.vercel.app/api/badge?username=tourist&theme=dark) | ![](https://codeforces-stats-vlx.vercel.app/api/badge?username=tourist&theme=tokyonight) | ![](https://codeforces-stats-vlx.vercel.app/api/badge?username=tourist&theme=vue) | ![](https://codeforces-stats-vlx.vercel.app/api/badge?username=tourist&theme=nord_dark)|
+| ![](https://codeforces-stats-vlx.vercel.app/api/badge?username=tourist&v1&theme=default) | ![](https://codeforces-stats-vlx.vercel.app/api/badge?username=tourist&v1&theme=dark) | ![](https://codeforces-stats-vlx.vercel.app/api/badge?username=tourist&v1&theme=tokyonight) | ![](https://codeforces-stats-vlx.vercel.app/api/badge?username=tourist&v1&theme=vue) | ![](https://codeforces-stats-vlx.vercel.app/api/badge?username=tourist&v1&theme=nord_dark)|
 |gruvbox|monokai|nord_bright|zenburn|radical|
-|![](https://codeforces-stats-vlx.vercel.app/api/badge?username=tourist&theme=gruvbox)|![](https://codeforces-stats-vlx.vercel.app/api/badge?username=tourist&theme=monokai)| ![](https://codeforces-stats-vlx.vercel.app/api/badge?username=tourist&theme=nord_bright)|![](https://codeforces-stats-vlx.vercel.app/api/badge?username=tourist&theme=zenburn)  |![](https://codeforces-stats-vlx.vercel.app/api/badge?username=tourist&theme=radical)|
+|![](https://codeforces-stats-vlx.vercel.app/api/badge?username=tourist&v1&theme=gruvbox)|![](https://codeforces-stats-vlx.vercel.app/api/badge?username=tourist&v1&theme=monokai)| ![](https://codeforces-stats-vlx.vercel.app/api/badge?username=tourist&v1&theme=nord_bright)|![](https://codeforces-stats-vlx.vercel.app/api/badge?username=tourist&v1&theme=zenburn)  |![](https://codeforces-stats-vlx.vercel.app/api/badge?username=tourist&v1&theme=radical)|
 |solarized|solarized_dark|transparent|
-|![](https://codeforces-stats-vlx.vercel.app/api/badge?username=tourist&theme=solarized)| ![](https://codeforces-stats-vlx.vercel.app/api/badge?username=tourist&theme=solarized_dark)| ![](https://codeforces-stats-vlx.vercel.app/api/badge?username=tourist&theme=transparent)|
+|![](https://codeforces-stats-vlx.vercel.app/api/badge?username=tourist&v1&theme=solarized)| ![](https://codeforces-stats-vlx.vercel.app/api/badge?username=tourist&v1&theme=solarized_dark)| ![](https://codeforces-stats-vlx.vercel.app/api/badge?username=tourist&v1&theme=transparent)|
 
 
 
@@ -77,7 +77,7 @@
 
 ## How to use (API)
 ### Profile details card
-![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&theme=dark)
+![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/card?username=tourist&v1&theme=dark)
 
 `![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/card?username={username}&theme={theme_name})`
 - Accept url parameters
@@ -91,7 +91,7 @@
 
 
 ### Rating graph card
-![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&theme=vue)
+![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/graph?username=tourist&v1&theme=vue)
 
 `![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/graph?username={username}&theme={theme_name})`
 - Accept url parameters
@@ -101,7 +101,7 @@
     - Username
 
 ### Badge card
-![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/badge?username=tourist&theme=dark)
+![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/badge?username=tourist&v1&theme=dark)
 
 
 `![Codeforces Stats](https://codeforces-stats-vlx.vercel.app/api/badge?username={username}&theme={theme_name})`
