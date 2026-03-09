@@ -41,14 +41,37 @@
     .chart-point { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: crosshair; }
     .chart-point:hover { stroke-width: 3.5px; r: 5.5px; }
     
-    /* Smooth entrance animation */
-    @keyframes modernFadeIn {
-      0% { opacity: 0; transform: translateY(8px); }
-      100% { opacity: 1; transform: translateY(0); }
+    /* 8-second infinite cycle animations — mirrors card template style */
+    @keyframes graphHeaderFadeIn {
+      0%  { opacity: 0; transform: translateY(8px); }
+      3%  { opacity: 1; transform: translateY(0); }
+      100%{ opacity: 1; transform: translateY(0); }
     }
-    .modern-animate-in {
-      animation: modernFadeIn 0.9s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    @keyframes graphChartFadeIn {
+      0%  { opacity: 0; }
+      3%  { opacity: 1; }
+      100%{ opacity: 1; }
+    }
+    @keyframes drawLine-cycle {
+      0%, 4%  { stroke-dashoffset: 10000; }
+      25%     { stroke-dashoffset: 0; }
+      100%    { stroke-dashoffset: 0; }
+    }
+    @keyframes fadeArea-cycle {
+      0%, 22% { opacity: 0; }
+      35%     { opacity: 1; }
+      100%    { opacity: 1; }
+    }
+    .modern-animate-in { animation: graphHeaderFadeIn 8s linear infinite; }
+    .chart-animate-in  { animation: graphChartFadeIn  8s linear infinite; }
+    .chart-line {
+      stroke-dasharray: 10000;
+      stroke-dashoffset: 10000;
+      animation: drawLine-cycle 8s linear infinite;
+    }
+    .chart-area {
       opacity: 0;
+      animation: fadeArea-cycle 8s linear infinite;
     }
     ]]>
   </style>
@@ -57,7 +80,7 @@
 
   <image href="{{ logo_b64 }}" x="499" y="17" width="20" height="20" opacity="0.90"/>
 
-  <g class="modern-animate-in" style="animation-delay: 0.1s;">
+  <g class="modern-animate-in">
     <text x="32" y="34" class="graph-header-title">Rating History</text>
     
     <rect x="148" y="21" width="1.8" height="16" fill="#{{ theme.border_color }}" opacity="0.5" rx="1.5"/>
@@ -69,7 +92,7 @@
   </g>
 
   <g transform="translate(65, 45)">
-    <g class="modern-animate-in" style="animation-delay: 0.2s;">
+    <g class="chart-animate-in">
       
       <g clip-path="url(#chartClip)" opacity="0.60">
         {% for band in rating_bands %}
@@ -84,15 +107,64 @@
 
       <line x1="0" y1="115" x2="420" y2="115" class="chart-baseline"/>
 
-      <path d="{{ area_path }}" fill="url(#areaGrad)" clip-path="url(#chartClip)"/>
+      <path d="{{ area_path }}" fill="url(#areaGrad)" clip-path="url(#chartClip)" class="chart-area"/>
 
-      <path d="{{ line_path }}" fill="none" stroke="{{ line_color }}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" clip-path="url(#chartClip)"/>
+      <path d="{{ line_path }}" fill="none" stroke="{{ line_color }}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" clip-path="url(#chartClip)" class="chart-line"/>
 
       {% for dot in dots %}
-      <circle cx="{{ dot.x }}" cy="{{ dot.y }}" r="{% if dot.isLast %}5{% else %}3{% endif %}" fill="{% if dot.isLast %}{{ dot.color }}{% else %}{{ line_color }}{% endif %}" stroke="#{{ theme.bg_color }}" stroke-width="{% if dot.isLast %}2.5{% else %}1.5{% endif %}" class="chart-point" opacity="{% if dot.isLast %}1{% else %}0.5{% endif %}">
+      <circle cx="{{ dot.x }}" cy="{{ dot.y }}" r="0" fill="{% if dot.isLast %}{{ dot.color }}{% else %}{{ line_color }}{% endif %}" stroke="#{{ theme.bg_color }}" stroke-width="{% if dot.isLast %}2.5{% else %}1.5{% endif %}" class="chart-point" opacity="0">
+        <animate attributeName="r"
+          values="0;0;{% if dot.isLast %}6.5{% else %}3.9{% endif %};{% if dot.isLast %}5{% else %}3{% endif %};{% if dot.isLast %}5{% else %}3{% endif %}"
+          keyTimes="0;{{ ((0.32 + 1.68 * dot.x / 420) / 8) | round(4) }};{{ ((0.32 + 1.68 * dot.x / 420) / 8 + 0.008) | round(4) }};{{ ((0.32 + 1.68 * dot.x / 420) / 8 + 0.013) | round(4) }};1"
+          dur="8s" repeatCount="indefinite" calcMode="linear"/>
+        <animate attributeName="opacity"
+          values="0;0;{% if dot.isLast %}1{% else %}0.5{% endif %};{% if dot.isLast %}1{% else %}0.5{% endif %}"
+          keyTimes="0;{{ ((0.32 + 1.68 * dot.x / 420) / 8) | round(4) }};{{ ((0.32 + 1.68 * dot.x / 420) / 8 + 0.013) | round(4) }};1"
+          dur="8s" repeatCount="indefinite"/>
         <title>{{ dot.contest_name }} | Rating: {{ dot.rating }} ({{ dot.date }})</title>
       </circle>
       {% endfor %}
+
+      <!-- Peak rating: double pulsing ring + solid dot + label -->
+      <circle cx="{{ peak_dot.x }}" cy="{{ peak_dot.y }}" r="9" fill="none"
+        stroke="{{ peak_dot.color }}" stroke-width="1.5" clip-path="url(#chartClip)" opacity="0">
+        <animate attributeName="r" values="9;24" dur="2s"
+          begin="{{ (0.32 + 1.68 * peak_dot.x / 420) | round(2) }}s"
+          repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.7;0" dur="2s"
+          begin="{{ (0.32 + 1.68 * peak_dot.x / 420) | round(2) }}s"
+          repeatCount="indefinite"/>
+      </circle>
+      <circle cx="{{ peak_dot.x }}" cy="{{ peak_dot.y }}" r="9" fill="none"
+        stroke="{{ peak_dot.color }}" stroke-width="1.5" clip-path="url(#chartClip)" opacity="0">
+        <animate attributeName="r" values="9;24" dur="2s"
+          begin="{{ (0.32 + 1.68 * peak_dot.x / 420 + 1) | round(2) }}s"
+          repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.7;0" dur="2s"
+          begin="{{ (0.32 + 1.68 * peak_dot.x / 420 + 1) | round(2) }}s"
+          repeatCount="indefinite"/>
+      </circle>
+      <!-- Solid filled peak dot (drawn on top of regular dots) -->
+      <circle cx="{{ peak_dot.x }}" cy="{{ peak_dot.y }}" r="0"
+        fill="white" stroke="{{ peak_dot.color }}" stroke-width="2"
+        clip-path="url(#chartClip)" opacity="0">
+        <animate attributeName="r"
+          values="0;0;8;6;6"
+          keyTimes="0;{{ ((0.32 + 1.68 * peak_dot.x / 420) / 8) | round(4) }};{{ ((0.32 + 1.68 * peak_dot.x / 420) / 8 + 0.008) | round(4) }};{{ ((0.32 + 1.68 * peak_dot.x / 420) / 8 + 0.016) | round(4) }};1"
+          dur="8s" repeatCount="indefinite" calcMode="linear"/>
+        <animate attributeName="opacity"
+          values="0;0;1;1"
+          keyTimes="0;{{ ((0.32 + 1.68 * peak_dot.x / 420) / 8) | round(4) }};{{ ((0.32 + 1.68 * peak_dot.x / 420) / 8 + 0.016) | round(4) }};1"
+          dur="8s" repeatCount="indefinite"/>
+      </circle>
+      <text x="{{ peak_dot.x }}" y="{{ peak_dot.y - 16 }}" text-anchor="middle"
+        font-size="15" font-weight="700" fill="white" opacity="0">
+        <animate attributeName="opacity"
+          values="0;0;0.95;0.95"
+          keyTimes="0;{{ ((0.32 + 1.68 * peak_dot.x / 420) / 8) | round(4) }};{{ ((0.32 + 1.68 * peak_dot.x / 420) / 8 + 0.02) | round(4) }};1"
+          dur="8s" repeatCount="indefinite"/>
+        {{ peak_dot.rating }}
+      </text>
 
       {% for tick in x_ticks %}
       <text x="{{ tick.x }}" y="136" text-anchor="middle" class="axis-label">{{ tick.label }}</text>

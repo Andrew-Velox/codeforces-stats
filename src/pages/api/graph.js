@@ -96,6 +96,14 @@ export default async function handler(req, res) {
       isLast: i === arr.length - 1,
     }));
 
+    const peakIndex = allRatings.indexOf(dataMax);
+    const peakDot = {
+      x: chartPoints[peakIndex].x,
+      y: chartPoints[peakIndex].y,
+      rating: points[peakIndex].rating,
+      color: chartPoints[peakIndex].color,
+    };
+
     // ── SVG paths ───────────────────────────────────────────
     const linePath = chartPoints
       .map((p, i) => `${i === 0 ? "M" : "L"}${p.x},${p.y}`)
@@ -187,6 +195,7 @@ export default async function handler(req, res) {
           line_path: linePath,
           area_path: areaPath,
           dots: chartPoints,
+          peak_dot: peakDot,
           y_ticks: yTicks,
           x_ticks: xTicks,
           rating_bands: ratingBands,
