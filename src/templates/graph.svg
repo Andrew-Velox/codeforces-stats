@@ -62,8 +62,8 @@
       35%     { opacity: 1; }
       100%    { opacity: 1; }
     }
-    .modern-animate-in { animation: graphHeaderFadeIn 8s linear infinite; }
-    .chart-animate-in  { animation: graphChartFadeIn  8s linear infinite; }
+    .modern-animate-in { animation: graphHeaderFadeIn 8s linear 1 forwards; }
+    .chart-animate-in  { animation: graphChartFadeIn  8s linear 1 forwards; }
     .chart-line {
       stroke-dasharray: 10000;
       stroke-dashoffset: 10000;
