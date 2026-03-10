@@ -157,14 +157,25 @@
           keyTimes="0;{{ ((0.32 + 1.68 * peak_dot.x / 420) / 8) | round(4) }};{{ ((0.32 + 1.68 * peak_dot.x / 420) / 8 + 0.016) | round(4) }};1"
           dur="8s" repeatCount="indefinite"/>
       </circle>
-      <text x="{{ peak_dot.x }}" y="{{ peak_dot.y - 16 }}" text-anchor="middle"
-        font-size="15" font-weight="700" fill="white" opacity="0">
+      <!-- Speech bubble box for peak rating -->
+      <g opacity="0">
         <animate attributeName="opacity"
           values="0;0;0.95;0.95"
           keyTimes="0;{{ ((0.32 + 1.68 * peak_dot.x / 420) / 8) | round(4) }};{{ ((0.32 + 1.68 * peak_dot.x / 420) / 8 + 0.02) | round(4) }};1"
           dur="8s" repeatCount="indefinite"/>
-        {{ peak_dot.rating }}
-      </text>
+        <!-- Box background -->
+        <rect x="{{ peak_dot.x - 27 }}" y="{{ peak_dot.y - 42 }}"
+          width="54" height="24" rx="5" ry="5"
+          fill="{{ peak_dot.color }}" />
+        <!-- Triangle pointer pointing down to the dot -->
+        <polygon
+          points="{{ peak_dot.x - 5 }},{{ peak_dot.y - 18 }} {{ peak_dot.x + 5 }},{{ peak_dot.y - 18 }} {{ peak_dot.x }},{{ peak_dot.y - 10 }}"
+          fill="{{ peak_dot.color }}" />
+        <!-- Rating text inside the box -->
+        <text x="{{ peak_dot.x }}" y="{{ peak_dot.y - 30 }}"
+          text-anchor="middle" dominant-baseline="middle"
+          font-size="13" font-weight="700" fill="white">{{ peak_dot.rating }}</text>
+      </g>
 
       {% for tick in x_ticks %}
       <text x="{{ tick.x }}" y="136" text-anchor="middle" class="axis-label">{{ tick.label }}</text>
