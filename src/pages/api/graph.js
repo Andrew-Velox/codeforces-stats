@@ -36,6 +36,10 @@ export default async function handler(req, res) {
     border_color,
     bg_color,
     cache_seconds,
+    border_radius,
+    border_width,
+    card_radius,
+    card_border_width,
   } = req.query;
 
   if (!themes[theme]) {
@@ -174,6 +178,20 @@ export default async function handler(req, res) {
       ...(bg_color && { bg_color }),
     };
 
+    // Border / radius overrides (mirror card endpoint).
+    // `border_radius` / `border_width` apply to the outer card; `card_*` is an alias.
+    // Bounds:
+    //   radius  0..60   (0 = sharp corners)
+    //   width   0..12   (0 = no visible stroke)
+    const clamp = (v, min, max, fallback) => {
+      const n = parseFloat(v);
+      if (!Number.isFinite(n)) return fallback;
+      return Math.max(min, Math.min(n, max));
+    };
+
+    const cardRadius = clamp(border_radius ?? card_radius, 0, 60, 0);
+    const cardBorderWidth = clamp(border_width ?? card_border_width, 0, 12, 0);
+
     // ── Response ────────────────────────────────────────────
     res.setHeader("Content-Type", "image/svg+xml");
     if (process.env.NODE_ENV === "development") {
@@ -200,6 +218,8 @@ export default async function handler(req, res) {
           x_ticks: xTicks,
           rating_bands: ratingBands,
           theme: themeConfig,
+          card_radius: cardRadius,
+          card_border_width: cardBorderWidth,
         }
       )
     );
