@@ -47,10 +47,16 @@ export default async function handler(req, res) {
       );
     }
 
+    const handle_attrs =
+      handle.length > 12
+        ? 'clip-path="url(#handleClip)" textLength="88" lengthAdjust="spacingAndGlyphs"'
+        : "";
+
     res.send(
       renderTemplate("badge.svg",
         {
           handle,
+          handle_attrs,
           rating,
           color: get_color_from_rating(rating),
           max_rank_color: get_color_from_rating(rating),

@@ -64,11 +64,7 @@
     fill="#{{ title_color }}"
     letter-spacing="0.2"
     class="b-handle"
-    {% if handle|length > 12 %}
-    clip-path="url(#handleClip)"
-    textLength="88"
-    lengthAdjust="spacingAndGlyphs"
-    {% endif %}
+    {{ handle_attrs }}
   >{{ handle }}</text>
 
   <!-- Separator -->

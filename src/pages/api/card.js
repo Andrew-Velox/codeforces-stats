@@ -32,6 +32,12 @@ export default async function handler(req, res) {
     cache_seconds,
     disable_animations,
     show_icons,
+    border_radius,
+    border_width,
+    card_radius,
+    card_border_width,
+    stat_radius,
+    stat_border_width,
   } = req.query;
 
   if (themes[theme] == undefined) {
@@ -139,6 +145,33 @@ export default async function handler(req, res) {
       themeConfig.chart_total_color = themeConfig.title_color;
     }
 
+    // Border / radius overrides.
+    // `border_radius` / `border_width` apply to the outer card.
+    // `card_*` is an alias; `stat_*` controls the stat-box outlines.
+    // Bounds chosen so users can't produce a degenerate card:
+    //   radius   0..60 (0 = sharp corners)
+    //   width  0.5..12  (must remain a visible stroke)
+    const clamp = (v, min, max, fallback) => {
+      const n = parseFloat(v);
+      if (!Number.isFinite(n)) return fallback;
+      return Math.max(min, Math.min(n, max));
+    };
+
+    const cardRadius = clamp(
+      border_radius ?? card_radius,
+      0,
+      60,
+      12
+    );
+    const cardBorderWidth = clamp(
+      border_width ?? card_border_width,
+      0.5,
+      12,
+      1
+    );
+    const statRadius = clamp(stat_radius, 0, 60, 6);
+    const statBorderWidth = clamp(stat_border_width, 0.5, 12, 1);
+
     // Tag colors: Use theme overriding existing constants if present
     // Note: TAG_COLORS has '#' prefix; theme colors usually do not. 
     const t1Color = themeConfig.tag_1_color ? `#${themeConfig.tag_1_color}` : TAG_COLORS[0];
@@ -192,6 +225,10 @@ export default async function handler(req, res) {
           animation: true,    // Force animation enabled
           show_icons: true,   // Force icons enabled
           theme: themeConfig,
+          card_radius: cardRadius,
+          card_border_width: cardBorderWidth,
+          stat_radius: statRadius,
+          stat_border_width: statBorderWidth,
         }
       )
     );
