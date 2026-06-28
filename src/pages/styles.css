@@ -22,6 +22,7 @@ a {
   width: 100vw;
   min-height: 100vh;
   background-color: #e7e7e7;
+  color: #1f2328;
 }
 
 .card {
@@ -30,6 +31,19 @@ a {
 
 .header {
   margin-bottom: 40px;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.dark-toggle {
+  display: inline-flex;
+  align-items: center;
 }
 
 .header-title {
@@ -75,6 +89,72 @@ a {
 
 .footer a > .anticon {
   margin-right: 5px;
+}
+
+/* Github Dark Mode for the preview page */
+body.dark-mode,
+body.dark-mode .main-body {
+  background-color: #0d1117;
+  color: #c9d1d9;
+}
+
+body.dark-mode .card,
+body.dark-mode .ant-card {
+  background-color: #161b22 !important;
+  border-color: #30363d !important;
+  color: #c9d1d9;
+}
+
+body.dark-mode .card .ant-card-body,
+body.dark-mode .card > div {
+  background-color: #161b22 !important;
+  color: #c9d1d9;
+}
+
+body.dark-mode .header-title,
+body.dark-mode h1,
+body.dark-mode .header p,
+body.dark-mode .footer,
+body.dark-mode .footer a {
+  color: #c9d1d9 !important;
+}
+
+body.dark-mode .ant-form-item-label > label,
+body.dark-mode .ant-form-item-required::before {
+  color: #c9d1d9 !important;
+}
+
+body.dark-mode .ant-input,
+body.dark-mode .ant-input-affix-wrapper,
+body.dark-mode .ant-select .ant-select-selector,
+body.dark-mode .ant-select .ant-select-selection-item,
+body.dark-mode .ant-select .ant-select-selection-placeholder {
+  background-color: #0d1117 !important;
+  color: #c9d1d9 !important;
+  border-color: #30363d !important;
+}
+
+body.dark-mode .ant-input::placeholder {
+  color: #6e7681 !important;
+}
+
+body.dark-mode .ant-select-arrow {
+  color: #c9d1d9 !important;
+}
+
+body.dark-mode .ant-btn-primary {
+  background-color: #238636 !important;
+  border-color: #2ea043 !important;
+}
+
+body.dark-mode .ant-btn-default {
+  background-color: #21262d !important;
+  border-color: #30363d !important;
+  color: #c9d1d9 !important;
+}
+
+body.dark-mode .ant-divider {
+  border-color: #30363d !important;
 }
 
 @media only screen and (max-width: 500px) {

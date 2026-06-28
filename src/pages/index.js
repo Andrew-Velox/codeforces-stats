@@ -4,6 +4,8 @@ import {
   BookFilled,
   ExportOutlined,
   CopyOutlined,
+  BulbOutlined,
+  BulbFilled,
 } from "@ant-design/icons";
 import {
   Space,
@@ -17,8 +19,10 @@ import {
   Divider,
   Row,
   Spin,
+  Switch,
   notification,
 } from "antd";
+import { useEffect } from "react";
 
 import themes from "@/themes.js";
 import Logo from "@/images/logo.png";
@@ -39,6 +43,12 @@ export default function Home() {
     checkHandleNotFound,
   } = useOption();
   const [api, contextHolder] = notification.useNotification();
+
+  useEffect(() => {
+    if (typeof document !== "undefined") {
+      document.body.classList.toggle("dark-mode", !!options.darkMode);
+    }
+  }, [options.darkMode]);
 
   const openNotification = (message, description) => {
     api.info({
@@ -89,10 +99,23 @@ export default function Home() {
         <Card className="card">
           <Col className="card-col">
             <div className="header">
-              <Space>
-                <Image src={Logo} alt="Logo" width={28} height={28} />
-                <h1 className="header-title">Codeforces Stats</h1>
-              </Space>
+              <div className="header-top">
+                <Space>
+                  <Image src={Logo} alt="Logo" width={28} height={28} />
+                  <h1 className="header-title">Codeforces Stats</h1>
+                </Space>
+                <Space size="small" className="dark-toggle">
+                  {options.darkMode ? <BulbFilled /> : <BulbOutlined />}
+                  <Switch
+                    checked={!!options.darkMode}
+                    onChange={(checked) =>
+                      setOptions((prev) => ({ ...prev, darkMode: checked }))
+                    }
+                    checkedChildren="Dark"
+                    unCheckedChildren="Light"
+                  />
+                </Space>
+              </div>
               <p>
                 ⚡ Dynamically generated Codeforces stats for your Github
                 profile!

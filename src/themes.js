@@ -173,8 +173,21 @@ const themes = {
     tag_2_color: "7f9f7f",
     tag_3_color: "f0dfaf",
     chart_total_color: "fff",
+  },
+
+  github_dark: {
+    title_color: "f0f6fc",
+    icon_color: "9198a1",
+    text_color: "c9d1d9",
+    bg_color: "0d1117",
+    border_color: "30363d",
+    box_border_color: "30363d",
+    tag_1_color: "58a6ff",
+    tag_2_color: "d2a8ff",
+    tag_3_color: "7ee787",
+    chart_total_color: "f0f6fc",
   }
-  
+
 };
 
 export default themes;

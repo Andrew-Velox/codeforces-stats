@@ -161,16 +161,16 @@ export default async function handler(req, res) {
       border_radius ?? card_radius,
       0,
       60,
-      12
+      0
     );
     const cardBorderWidth = clamp(
       border_width ?? card_border_width,
-      0.5,
+      0,
       12,
-      1
+      0
     );
-    const statRadius = clamp(stat_radius, 0, 60, 6);
-    const statBorderWidth = clamp(stat_border_width, 0.5, 12, 1);
+    const statRadius = clamp(stat_radius, 0, 60, 0);
+    const statBorderWidth = clamp(stat_border_width, 0, 12, 0);
 
     // Tag colors: Use theme overriding existing constants if present
     // Note: TAG_COLORS has '#' prefix; theme colors usually do not. 

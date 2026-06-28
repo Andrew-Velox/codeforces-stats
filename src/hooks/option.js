@@ -6,6 +6,7 @@ const defaultOption = {
   username: "yalniz",
   theme: "default",
   template: "card",
+  darkMode: false,
 };
 
 const useOption = () => {
