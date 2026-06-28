@@ -20,7 +20,7 @@
   <style>
     <![CDATA[
     svg { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-    .card-bg { fill: #{{ theme.bg_color }}; stroke: #{{ theme.border_color }}; stroke-width: 1; }
+    .card-bg { fill: #{{ theme.bg_color }}; stroke: #{{ theme.border_color }}; }
     .title { font-size: 20px; font-weight: 800; fill: #{{ theme.title_color }}; }
     .handle { font-size: 14px; fill: #{{ theme.text_color }}; font-weight: 500; }
     .muted { font-size: 12px; fill: #{{ theme.icon_color }}; }
@@ -34,7 +34,7 @@
     .color-max-rank { fill: {{ max_rank_color }} !important; }
     .chart-ring { fill: none; stroke-width: 25; }
     .avatar-bg { fill: none; stroke: #{{ theme.border_color }}; stroke-width: 2; }
-    .stat-box { fill: none; stroke: #{{ theme.box_border_color }}; stroke-width: 1; stroke-opacity: 0.5; }
+    .stat-box { fill: none; stroke: #{{ theme.box_border_color }}; stroke-opacity: 0.5; }
     /* === 9s cycle: fast ~2s reveal, then holds 7s before reset === */
     @keyframes donut-spin-cycle {
       0%     { transform: rotate(-360deg) scale(0.1); opacity: 0; }
