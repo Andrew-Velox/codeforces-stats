@@ -58,6 +58,34 @@ a {
   margin-bottom: 10px;
 }
 
+.form-item .ant-input {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 12px;
+}
+
+/* Image URL field: textarea on top, Submit button below, full-width */
+.form-item.url-field {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.form-item.url-field .ant-form-item-label {
+  text-align: left;
+  padding: 0 0 4px 0 !important;
+}
+
+.form-item.url-field .url-textarea {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 12px;
+  resize: vertical;
+  margin-bottom: 8px;
+}
+
+.form-item.url-field .url-submit {
+  width: 100%;
+}
+
 .submit-wrapper {
   display: flex;
   justify-content: center;

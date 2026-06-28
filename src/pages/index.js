@@ -22,7 +22,7 @@ import {
   Switch,
   notification,
 } from "antd";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import themes from "@/themes.js";
 import Logo from "@/images/logo.png";
@@ -43,12 +43,73 @@ export default function Home() {
     checkHandleNotFound,
   } = useOption();
   const [api, contextHolder] = notification.useNotification();
+  const [urlInput, setUrlInput] = useState(imageUrl);
 
   useEffect(() => {
     if (typeof document !== "undefined") {
       document.body.classList.toggle("dark-mode", !!options.darkMode);
     }
   }, [options.darkMode]);
+
+  // Keep the URL field in sync with the canonical imageUrl whenever
+  // options change (unless the user is actively editing it).
+  useEffect(() => {
+    setUrlInput(imageUrl);
+  }, [imageUrl]);
+
+  const KNOWN_FIELDS = new Set([
+    "username",
+    "theme",
+    "template",
+    "border_radius",
+    "border_width",
+    "card_radius",
+    "card_border_width",
+    "stat_radius",
+    "stat_border_width",
+    "title_color",
+    "text_color",
+    "icon_color",
+    "border_color",
+    "bg_color",
+    "tag_1_color",
+    "tag_2_color",
+    "tag_3_color",
+    "chart_total_color",
+    "box_border_color",
+    "cache_seconds",
+  ]);
+
+  const handleUrlSubmit = () => {
+    try {
+      const trimmed = urlInput.trim();
+      const url = new URL(
+        trimmed.startsWith("http") ? trimmed : `${window.location.origin}${trimmed}`
+      );
+      const params = url.searchParams;
+      const templateFromPath = (url.pathname.match(/\/api\/(card|graph|badge)/) || [])[1];
+      const next = { ...options };
+
+      if (templateFromPath) next.template = templateFromPath;
+      params.forEach((value, key) => {
+        if (KNOWN_FIELDS.has(key)) next[key] = value;
+      });
+
+      setOptions(next);
+      // If the URL explicitly sets a different image, push it through so
+      // the preview updates immediately even if no known field changed.
+      updateImage(next);
+      if (templateFromPath) updateImage(next);
+      api.success({ message: "URL applied", placement: "topRight", duration: 2 });
+    } catch (err) {
+      api.error({
+        message: "Invalid URL",
+        description: "Make sure it points to /api/card, /api/graph or /api/badge.",
+        placement: "topRight",
+        duration: 3,
+      });
+    }
+  };
 
   const openNotification = (message, description) => {
     api.info({
@@ -175,6 +236,30 @@ export default function Home() {
                       ]}
                     />
                   </Form.Item>
+                  <Form.Item className="form-item url-field" label="Image URL">
+                    <Input.TextArea
+                      className="url-textarea"
+                      value={urlInput}
+                      onChange={(e) => setUrlInput(e.target.value)}
+                      onPressEnter={(e) => {
+                        if (!e.shiftKey) {
+                          e.preventDefault();
+                          handleUrlSubmit();
+                        }
+                      }}
+                      autoComplete="off"
+                      spellCheck={false}
+                      autoSize={{ minRows: 2, maxRows: 4 }}
+                    />
+                    <Button
+                      type="primary"
+                      className="url-submit"
+                      onClick={handleUrlSubmit}
+                    >
+                      Submit
+                    </Button>
+                  </Form.Item>
+
                   <Form.Item className="form-item">
                     <Space className="submit-wrapper">
                       
